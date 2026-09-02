@@ -43,6 +43,7 @@
 #include "CConn.h"
 #include "Surface.h"
 #include "Viewport.h"
+#include "Win2VNC.h"
 #include "touch.h"
 #include "fltk/event_dispatch_handler.h"
 
@@ -88,7 +89,8 @@ DesktopWindow::DesktopWindow(int w, int h, CConn* cc_)
     firstUpdate(true),
     delayedFullscreen(false), sentDesktopSize(false),
     pendingRemoteResize(false), lastResize({0, 0}),
-    keyboardGrabbed(false), mouseGrabbed(false), regrabOnFocus(false),
+    keyboardGrabbed(false), mouseGrabbed(false), win2vncStrip(false),
+    regrabOnFocus(false),
     statsLastUpdates(0), statsLastPixels(0), statsLastPosition(0),
     statsGraph(nullptr)
 {
@@ -190,7 +192,7 @@ DesktopWindow::DesktopWindow(int w, int h, CConn* cc_)
     size(w, h);
   }
 
-  if (fullScreen) {
+  if (fullScreen && !win2vncMode) {
     // Hack: Window managers seem to be rather crappy at respecting
     // fullscreen hints on initial windows. So on X11 we'll have to
     // wait until after we've been mapped.
@@ -217,7 +219,7 @@ DesktopWindow::DesktopWindow(int w, int h, CConn* cc_)
   // maximized property on Windows and X11 before showing the window.
   // See STR #2083 and STR #2178
 #ifndef __APPLE__
-  if (::maximize) {
+  if (::maximize && !win2vncMode) {
     maximizeWindow();
   }
 #endif
@@ -411,9 +413,11 @@ void DesktopWindow::setCursor()
 }
 
 
-void DesktopWindow::setCursorPos(const core::Point& pos, bool force)
+void DesktopWindow::setCursorPos(const core::Point& pos)
 {
-  if (!mouseGrabbed && !force) {
+  // In Win2VNC mode we are the one deciding where the pointer is, so
+  // ignore anything the server has to say about it
+  if (!mouseGrabbed || win2vncMode) {
     // Do nothing if we do not have the mouse captured.
     return;
   }
@@ -431,68 +435,106 @@ void DesktopWindow::setCursorPos(const core::Point& pos, bool force)
 #endif
 }
 
-void DesktopWindow::warpCursorToScreen(int rootX, int rootY)
+
+void DesktopWindow::win2vncSetupStrip()
 {
-#if defined(WIN32)
-  SetCursorPos(rootX, rootY);
-#elif defined(__APPLE__)
-  CGPoint new_pos;
-  new_pos.x = rootX;
-  new_pos.y = rootY;
-  CGWarpMouseCursorPosition(new_pos);
-#else // Assume this is Xlib
-  x11_warp_pointer(rootX, rootY);
-#endif
+  int sx, sy, sw, sh;
+  int mx, my;
+  int width;
+  int wx, wy, ww, wh;
+
+  // Shrink ourselves down to a thin strip along the edge of the screen
+  // where the remote system is. Touching that strip is what hands the
+  // local input devices over to the remote session.
+
+  Fl::get_mouse(mx, my);
+  Fl::screen_work_area(sx, sy, sw, sh, mx, my);
+
+  width = win2vncWidth;
+  if (width < 1)
+    width = 1;
+
+  switch (win2vncEdgeParam()) {
+  case Win2VNCLeft:
+    wx = sx;
+    wy = sy;
+    ww = width;
+    wh = sh;
+    break;
+  case Win2VNCTop:
+    wx = sx;
+    wy = sy;
+    ww = sw;
+    wh = width;
+    break;
+  case Win2VNCBottom:
+    wx = sx;
+    wy = sy + sh - width;
+    ww = sw;
+    wh = width;
+    break;
+  case Win2VNCRight:
+  default:
+    wx = sx + sw - width;
+    wy = sy;
+    ww = width;
+    wh = sh;
+    break;
+  }
+
+  if (fullscreen_active()) {
+    fullScreen.setParam(false);
+    fullscreen_off();
+  }
+
+  border(0);
+  resize(wx, wy, ww, wh);
+
+  win2vncStrip = true;
 }
 
 
 void DesktopWindow::applyWin2VNCMode()
 {
-  if (!win2vncMode)
+  bool wanted;
+
+  wanted = win2vncMode;
+  if (wanted == win2vncStrip)
     return;
 
-  int sx = 0, sy = 0, sw = 0, sh = 0;
-  int mx = 0, my = 0;
-  Fl::get_mouse(mx, my);
-  Fl::screen_work_area(sx, sy, sw, sh, mx, my);
+  // Changing the border of a window only has an effect when it is
+  // mapped, so we have to bounce it
+  if (shown())
+    hide();
 
-  int width = win2vncWidth;
-  int wx = sx, wy = sy, ww = sw, wh = sh;
-
-  std::string edge = win2vncEdge.getValueStr();
-  if (edge == "Left") {
-    wx = sx;
-    wy = sy;
-    ww = width;
-    wh = sh;
-  } else if (edge == "Top") {
-    wx = sx;
-    wy = sy;
-    ww = sw;
-    wh = width;
-  } else if (edge == "Bottom") {
-    wx = sx;
-    wy = sy + sh - width;
-    ww = sw;
-    wh = width;
+  if (win2vncMode) {
+    win2vncSetupStrip();
   } else {
-    // Default: Right
-    wx = sx + sw - width;
-    wy = sy;
-    ww = width;
-    wh = sh;
+    win2vncStrip = false;
+    border(1);
+    size(viewport->w(), viewport->h());
   }
 
-  border(0);
-  resize(wx, wy, ww, wh);
+  show();
 }
+
 
 void DesktopWindow::show()
 {
   if (win2vncMode)
-    applyWin2VNCMode();
+    win2vncSetupStrip();
 
   Fl_Window::show();
+
+  if (win2vncMode) {
+    // The strip is useless if it ends up behind some other window
+#if defined(WIN32)
+    SetWindowPos(fl_xid(this), HWND_TOPMOST, 0, 0, 0, 0,
+                 SWP_NOMOVE | SWP_NOSIZE | SWP_NOACTIVATE);
+#elif defined(__APPLE__)
+    cocoa_keep_window_on_top(this);
+#endif
+  }
 
 #if !defined(WIN32) && !defined(__APPLE__)
   // Request ability to grab keyboard under Xwayland
@@ -913,6 +955,20 @@ void DesktopWindow::updateOverlay(void *data)
 
 int DesktopWindow::handle(int event)
 {
+  if (win2vncMode) {
+    // We are just a trigger strip along the edge of the screen, so any
+    // pointer activity means the user wants to move over to the remote
+    // system
+    switch (event) {
+    case FL_ENTER:
+    case FL_MOVE:
+    case FL_DRAG:
+    case FL_PUSH:
+      viewport->win2vncStart();
+      return 1;
+    }
+  }
+
   switch (event) {
   case FL_FULLSCREEN:
     fullScreen.setParam(fullscreen_active());
@@ -1347,6 +1403,10 @@ void DesktopWindow::remoteResize()
 
   if (!::remoteResize)
     return;
+  // In Win2VNC mode this window is just a thin strip along the screen
+  // edge, which is not a size we want the remote session to have
+  if (win2vncMode)
+    return;
   if (!cc->server.supportsSetDesktopSize)
     return;
 
@@ -1576,7 +1636,9 @@ void DesktopWindow::repositionWidgets()
 
   // Scrollbars visbility
 
-  if (fullscreen_active()) {
+  if (fullscreen_active() || win2vncMode) {
+    // The Win2VNC strip is way too small for scrollbars, and they would
+    // cover the entire window and swallow the pointer events we need
     hscroll->hide();
     vscroll->hide();
   } else {
@@ -1637,8 +1699,11 @@ void DesktopWindow::handleOptions(void *data)
 {
   DesktopWindow *self = (DesktopWindow*)data;
 
+  self->applyWin2VNCMode();
+
+  // Full screen makes no sense for the Win2VNC trigger strip
   if (win2vncMode)
-    self->applyWin2VNCMode();
+    return;
 
   // Call fullscreen_on even if active since it handles
   // fullScreenMode

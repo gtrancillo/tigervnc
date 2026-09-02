@@ -214,3 +214,17 @@ void win32_disable_lowlevel_keyboard(HWND hwnd)
     UnhookWindowsHookEx(msg_hook);
   msg_hook = NULL;
 }
+
+void win32_make_window_transparent(HWND hwnd)
+{
+  LONG style;
+
+  /* A layered window with a very low alpha is invisible to the user,
+     but still gets all the mouse events happening on top of it */
+  style = GetWindowLong(hwnd, GWL_EXSTYLE);
+  SetWindowLong(hwnd, GWL_EXSTYLE, style | WS_EX_LAYERED);
+  SetLayeredWindowAttributes(hwnd, 0, 1, LWA_ALPHA);
+
+  SetWindowPos(hwnd, HWND_TOPMOST, 0, 0, 0, 0,
+               SWP_NOMOVE | SWP_NOSIZE | SWP_NOACTIVATE);
+}

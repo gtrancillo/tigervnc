@@ -191,18 +191,22 @@ core::BoolParameter
 
 core::BoolParameter
   win2vncMode("Win2VNCMode",
-              _("Enable Win2VNC screen edge input forwarding mode"),
+              _("Shrink the window to a strip along the edge of the "
+                "screen, and hand the local mouse and keyboard over to "
+                "the remote session when the pointer touches it"),
               false);
 core::EnumParameter
   win2vncEdge("Win2VNCEdge",
               core::format(
                 "%s (%s)",
-                _("Screen edge where remote system is located"),
+                _("Which edge of the local screen the remote system is "
+                  "located at"),
                 "Right, Left, Top, Bottom").c_str(),
               {"Right", "Left", "Top", "Bottom"}, "Right");
 core::IntParameter
   win2vncWidth("Win2VNCWidth",
-               _("Thickness in pixels of the Win2VNC trigger strip along the screen edge"),
+               _("Thickness in pixels of the strip along the screen "
+                 "edge that hands input over to the remote session"),
                3, 1, 50);
 
 core::BoolParameter

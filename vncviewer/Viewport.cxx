@@ -30,6 +30,7 @@
 #include <core/LogWriter.h>
 #include <core/i18n.h>
 #include <core/string.h>
+#include <core/time.h>
 
 #include <rfb/CMsgWriter.h>
 #include <rfb/Cursor.h>
@@ -51,6 +52,7 @@
 #include "fltk/util.h"
 #include "Viewport.h"
 #include "CConn.h"
+#include "Win2VNC.h"
 #include "OptionsDialog.h"
 #include "DesktopWindow.h"
 #include "parameters.h"
@@ -79,6 +81,10 @@
 
 static core::LogWriter vlog("Viewport");
 
+// How long to wait before the trigger strip is armed again after the
+// remote session has given the local devices back (in milliseconds)
+static const unsigned WIN2VNC_COOLDOWN_MS = 500;
+
 // Menu constants
 
 enum { ID_DISCONNECT, ID_FULLSCREEN, ID_MINIMIZE, ID_RESIZE,
@@ -99,9 +105,11 @@ Viewport::Viewport(int w, int h, CConn* cc_)
     keyboard(nullptr), shortcutBypass(false), shortcutActive(false),
     firstLEDState(true), pendingClientClipboard(false),
     menuCtrlKey(false), menuAltKey(false), cursor(nullptr),
-    cursorIsBlank(false), win2vncForwarding(false),
-    win2vncRemotePos(0, 0), win2vncLastRootPos(0, 0)
+    cursorIsBlank(false), win2vncOverlay(nullptr)
 {
+  win2vncLastRelease.tv_sec = 0;
+  win2vncLastRelease.tv_usec = 0;
+
 #if defined(WIN32)
   keyboard = new KeyboardWin32(this);
 #elif defined(__APPLE__)
@@ -160,6 +168,8 @@ Viewport::~Viewport()
   Fl::remove_clipboard_notify(handleClipboardChange);
 
   OptionsDialog::removeCallback(handleOptions);
+
+  delete win2vncOverlay;
 
   if (cursor) {
     if (!cursor->alloc_array)
@@ -459,11 +469,18 @@ int Viewport::handle(int event)
     return 1;
 
   case FL_ENTER:
+    if (win2vncMode) {
+      // The pointer touched the trigger strip
+      win2vncStart();
+      return 1;
+    }
     showCursor();
     // Yes, we would like some pointer events please!
     return 1;
 
   case FL_LEAVE:
+    if (win2vncMode)
+      return 1;
     window()->cursor(FL_CURSOR_DEFAULT);
     // We want a last move event to help trigger edge stuff
     handlePointerEvent({Fl::event_x() - x(), Fl::event_y() - y()}, 0);
@@ -572,6 +589,11 @@ bool Viewport::hasFocus()
 {
   Fl_Widget* focus;
 
+  // Whilst forwarding input the focus is on the Win2VNC window, but all
+  // keyboard events still belong to the remote session
+  if (win2vncActive())
+    return true;
+
   focus = Fl::grab();
   if (!focus)
     focus = Fl::focus();
@@ -653,56 +675,12 @@ void Viewport::flushPendingClipboard()
 void Viewport::handlePointerEvent(const core::Point& pos,
                                   uint16_t buttonMask)
 {
-  if (win2vncMode && !win2vncForwarding) {
-    // Mouse just entered the edge strip — start forwarding
-    win2vncForwarding = true;
-
-    std::string edge = win2vncEdge.getValueStr();
-    int rootX = Fl::event_x_root();
-    int rootY = Fl::event_y_root();
-
-    int sx = 0, sy = 0, sw = 1, sh = 1;
-    Fl::screen_work_area(sx, sy, sw, sh, rootX, rootY);
-    sw = std::max(1, sw);
-    sh = std::max(1, sh);
-
-    int relY = rootY - sy;
-    int relX = rootX - sx;
-    int remoteW = cc->server.width();
-    int remoteH = cc->server.height();
-
-    if (edge == "Left") {
-      win2vncRemotePos.x = remoteW - 5;
-      win2vncRemotePos.y = (relY * remoteH) / sh;
-    } else if (edge == "Top") {
-      win2vncRemotePos.x = (relX * remoteW) / sw;
-      win2vncRemotePos.y = remoteH - 5;
-    } else if (edge == "Bottom") {
-      win2vncRemotePos.x = (relX * remoteW) / sw;
-      win2vncRemotePos.y = 5;
-    } else {
-      win2vncRemotePos.x = 5;
-      win2vncRemotePos.y = (relY * remoteH) / sh;
-    }
-
-    win2vncLastRootPos = core::Point(rootX, rootY);
-
-    // Hide cursor and dissociate mouse position on macOS
-#ifdef __APPLE__
-    CGAssociateMouseAndMouseCursorPosition(false);
-    CGDisplayHideCursor(kCGDirectMainDisplay);
-#endif
-
-    // Install global handler to track all mouse movement
-    win2vncActiveViewport = this;
-    Fl::add_handler(Viewport::win2vncGlobalHandler);
-
-    filterPointerEvent(win2vncRemotePos, buttonMask);
-    return;
-  }
-
-  if (win2vncMode && win2vncForwarding) {
-    // Already forwarding — handled by global handler, ignore here
+  if (win2vncMode) {
+    // The window is just a thin strip along the edge of the screen, so
+    // any pointer event here means the user wants to move over to the
+    // remote system. From this point on the pointer is tracked by
+    // Win2VNCOverlay instead.
+    win2vncStart();
     return;
   }
 
@@ -710,88 +688,66 @@ void Viewport::handlePointerEvent(const core::Point& pos,
 }
 
 
-// Static: currently active Win2VNC viewport (only one at a time)
-static Viewport* win2vncActiveViewport = nullptr;
-
-void Viewport::win2vncProcessMouse(int rootX, int rootY, uint16_t buttonMask)
+bool Viewport::win2vncActive() const
 {
-  int dx = rootX - win2vncLastRootPos.x;
-  int dy = rootY - win2vncLastRootPos.y;
-  win2vncLastRootPos = core::Point(rootX, rootY);
-
-  if (dx == 0 && dy == 0)
-    return;
-
-  win2vncRemotePos.x += dx;
-  win2vncRemotePos.y += dy;
-
-  std::string edge = win2vncEdge.getValueStr();
-  int remoteW = cc->server.width();
-  int remoteH = cc->server.height();
-  bool returnControl = false;
-
-  if (edge == "Right" && win2vncRemotePos.x < 0)
-    returnControl = true;
-  else if (edge == "Left" && win2vncRemotePos.x >= remoteW)
-    returnControl = true;
-  else if (edge == "Top" && win2vncRemotePos.y >= remoteH)
-    returnControl = true;
-  else if (edge == "Bottom" && win2vncRemotePos.y < 0)
-    returnControl = true;
-
-  if (returnControl) {
-    win2vncStopForwarding();
-    return;
-  }
-
-  win2vncRemotePos.x = std::max(0, std::min(remoteW - 1, win2vncRemotePos.x));
-  win2vncRemotePos.y = std::max(0, std::min(remoteH - 1, win2vncRemotePos.y));
-
-  filterPointerEvent(win2vncRemotePos, buttonMask);
+  return (win2vncOverlay != nullptr) && win2vncOverlay->active();
 }
 
-void Viewport::win2vncStopForwarding()
+
+void Viewport::win2vncStart()
 {
-  win2vncForwarding = false;
-  win2vncActiveViewport = nullptr;
+  int mx, my;
 
-  // Remove global handler
-  Fl::remove_handler(Viewport::win2vncGlobalHandler);
+  if (!win2vncMode || viewOnly)
+    return;
 
-  // Re-associate cursor and show it
-#ifdef __APPLE__
-  CGAssociateMouseAndMouseCursorPosition(true);
-  CGDisplayShowCursor(kCGDirectMainDisplay);
-#endif
+  if (win2vncActive())
+    return;
+
+  // We put the pointer close to the trigger strip when handing control
+  // back, so wait a moment before we allow a new trigger. Otherwise we
+  // could end up bouncing back and forth.
+  if ((win2vncLastRelease.tv_sec != 0) &&
+      (core::msSince(&win2vncLastRelease) < WIN2VNC_COOLDOWN_MS))
+    return;
+
+  if (win2vncOverlay == nullptr)
+    win2vncOverlay = new Win2VNCOverlay(this);
+
+  Fl::get_mouse(mx, my);
+
+  win2vncOverlay->takeControl(mx, my);
 }
 
-int Viewport::win2vncGlobalHandler(int event)
+
+void Viewport::win2vncStop()
 {
-  Viewport *vp = win2vncActiveViewport;
+  if (win2vncOverlay != nullptr)
+    win2vncOverlay->releaseControl();
+}
 
-  if (!vp || !vp->win2vncForwarding)
-    return 0;
 
-  switch (event) {
-  case FL_MOVE:
-  case FL_DRAG:
-  case FL_PUSH:
-  case FL_RELEASE:
-  {
-    uint16_t buttonMask = 0;
-    if (Fl::event_button1())
-      buttonMask |= 1 << 0;
-    if (Fl::event_button2())
-      buttonMask |= 1 << 1;
-    if (Fl::event_button3())
-      buttonMask |= 1 << 2;
+void Viewport::win2vncGetRemoteSize(int* width, int* height)
+{
+  *width = cc->server.width();
+  *height = cc->server.height();
+}
 
-    vp->win2vncProcessMouse(Fl::event_x_root(), Fl::event_y_root(), buttonMask);
-    return 1; // consumed
-  }
-  default:
-    return 0;
-  }
+
+void Viewport::win2vncSendPointer(const core::Point& pos,
+                                  uint16_t buttonMask)
+{
+  filterPointerEvent(pos, buttonMask);
+}
+
+
+void Viewport::win2vncReleased()
+{
+  gettimeofday(&win2vncLastRelease, nullptr);
+
+  // We will not see any more key events for the remote session, so make
+  // sure nothing is left pressed there
+  resetKeyboard();
 }
 
 
@@ -949,9 +905,9 @@ void Viewport::handleKeyPress(int systemKeyCode,
     }
   }
 
-  if (win2vncMode && win2vncForwarding && keySym == XK_Scroll_Lock) {
-    win2vncForwarding = false;
-    Fl::grab(nullptr);
+  // Traditional Win2VNC escape hatch
+  if (win2vncActive() && (keySym == XK_Scroll_Lock)) {
+    win2vncStop();
     return;
   }
 
@@ -1015,10 +971,7 @@ void Viewport::handleKeyRelease(int systemKeyCode)
       win = dynamic_cast<DesktopWindow*>(window());
       assert(win);
       win->ungrabKeyboard();
-      if (win2vncMode && win2vncForwarding) {
-        win2vncForwarding = false;
-        win->ungrabPointer();
-      }
+      win2vncStop();
 
       return;
     }
@@ -1214,6 +1167,11 @@ void Viewport::handleOptions(void *data)
     modifierMask |= ShortcutHandler::parseModifier(key.getValueStr().c_str());
 
   self->shortcutHandler.setModifiers(modifierMask);
+
+  // Win2VNC mode might have been turned off whilst the remote session
+  // had control of the local devices
+  if (!win2vncMode)
+    self->win2vncStop();
 
   if (Fl::belowmouse() == self)
     self->showCursor();

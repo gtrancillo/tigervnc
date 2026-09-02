@@ -63,10 +63,7 @@ public:
   void setCursor();
 
   // Server-provided cursor position
-  void setCursorPos(const core::Point& pos, bool force = false);
-
-  // Warp cursor to absolute screen coordinates
-  void warpCursorToScreen(int rootX, int rootY);
+  void setCursorPos(const core::Point& pos);
 
   // Change client LED state
   void setLEDState(unsigned int state);
@@ -91,9 +88,13 @@ public:
   void grabPointer();
   void ungrabPointer();
 
+  // Turn this window in to a trigger strip along the screen edge (or
+  // back in to a normal window) depending on the Win2VNCMode parameter
   void applyWin2VNCMode();
 
 private:
+  void win2vncSetupStrip();
+
   void addOverlayTip(const char *text, ...)
     __attribute__((__format__ (__printf__, 2, 3)));
   void addOverlayError(const char *text, ...)
@@ -153,6 +154,7 @@ private:
 
   bool keyboardGrabbed;
   bool mouseGrabbed;
+  bool win2vncStrip;
 
   bool regrabOnFocus;
 

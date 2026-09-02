@@ -36,6 +36,9 @@ void x11_ungrab_keyboard();
 
 void x11_warp_pointer(unsigned x, unsigned y);
 
+// Ask the compositor (if any) to make the window (almost) invisible
+void x11_set_window_opacity(Fl_Window* win, double opacity);
+
 bool x11_is_pointer_on_same_screen(Fl_Window* win);
 
 #endif

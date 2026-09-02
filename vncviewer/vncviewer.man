@@ -306,6 +306,27 @@ Dynamically resize the remote desktop size as the size of the local client
 window changes. Note that this may not work with all VNC servers.
 .
 .TP
+.B \-Win2VNCMode
+Turn the viewer window in to a thin strip along one of the edges of the
+local screen, in the style of Win2VNC. Moving the mouse pointer on to
+that strip hands the local mouse and keyboard over to the remote
+session, as if the remote screen was an extra monitor placed next to
+the local one. Push the pointer back out through the opposite edge of
+the remote screen to get control of the local system again, or press
+and release the shortcut modifiers (see \fB\-ShortcutModifiers\fP,
+Ctrl+Alt by default). Default is off.
+.
+.TP
+.B \-Win2VNCEdge \fIedge\fP
+Which edge of the local screen the remote system is located at, i.e.
+where the trigger strip is put. Valid values are \fBRight\fP,
+\fBLeft\fP, \fBTop\fP and \fBBottom\fP. Default is \fBRight\fP.
+.
+.TP
+.B \-Win2VNCWidth \fIpixels\fP
+How thick the trigger strip should be, in pixels. Default is 3.
+.
+.TP
 .B \-SecurityTypes \fIsec-types\fP
 Specify which security schemes to attempt to use when authenticating with
 the server.  Valid values are a comma separated list of \fBNone\fP,
