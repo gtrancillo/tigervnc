@@ -1,0 +1,128 @@
+{
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"libtool_generate_control_file",
+			"libtool_generate_control_files"
+		],
+		"files" : 
+		[
+			"cmake/Modules/CMakeMacroLibtoolFile.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 498,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 197,
+				"parent" : 2
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "rdr::@aa2c57ea6e5912bfa26f"
+		}
+	],
+	"id" : "rdr.la::@6890427a1f51a3e7e1df",
+	"name" : "rdr.la",
+	"orderDependencies" : 
+	[
+		{
+			"id" : "rdr::@aa2c57ea6e5912bfa26f"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"backtraces" : 
+			[
+				3
+			],
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/rdr.la",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"backtraces" : 
+			[
+				0
+			],
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/rdr.la.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"backtraces" : 
+			[
+				0
+			],
+			"isGenerated" : true,
+			"path" : "build/common/rdr/.librdr.la.fresh.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"backtraces" : 
+			[
+				0
+			],
+			"isGenerated" : true,
+			"path" : "build/common/rdr/.libs/librdr.a.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

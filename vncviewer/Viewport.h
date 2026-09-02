@@ -133,6 +133,17 @@ private:
   Fl_RGB_Image *cursor;
   core::Point cursorHotspot;
   bool cursorIsBlank;
+
+  bool win2vncForwarding;
+  core::Point win2vncRemotePos;
+  core::Point win2vncLastRootPos;
+
+public:
+  // Global FLTK event handler for Win2VNC mouse forwarding
+  static int win2vncGlobalHandler(int event);
+  bool isWin2VNCForwarding() const { return win2vncForwarding; }
+  void win2vncProcessMouse(int rootX, int rootY, uint16_t buttonMask);
+  void win2vncStopForwarding();
 };
 
 #endif

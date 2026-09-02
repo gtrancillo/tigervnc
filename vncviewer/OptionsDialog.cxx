@@ -97,6 +97,7 @@ OptionsDialog::OptionsDialog()
     createInputPage(tx, ty, tw, th);
     createShortcutsPage(tx, ty, tw, th);
     createDisplayPage(tx, ty, tw, th);
+    createWin2VNCPage(tx, ty, tw, th);
     createMiscPage(tx, ty, tw, th);
   }
 
@@ -371,6 +372,23 @@ void OptionsDialog::loadOptions(void)
     cursorTypeChoice->value(0);
   }
   handleAlwaysCursor(alwaysCursorCheckbox, this);
+
+  /* Win2VNC */
+  win2vncCheckbox->value(win2vncMode);
+  if (win2vncEdge == "Left")
+    win2vncEdgeChoice->value(1);
+  else if (win2vncEdge == "Top")
+    win2vncEdgeChoice->value(2);
+  else if (win2vncEdge == "Bottom")
+    win2vncEdgeChoice->value(3);
+  else
+    win2vncEdgeChoice->value(0);
+
+  char wbuf[16];
+  snprintf(wbuf, sizeof(wbuf), "%d", (int)win2vncWidth);
+  win2vncWidthInput->value(wbuf);
+
+  handleWin2VNC(win2vncCheckbox, this);
 }
 
 
@@ -529,6 +547,20 @@ void OptionsDialog::storeOptions(void)
     // Default
     cursorType.setParam("Dot");
   }
+
+  /* Win2VNC */
+  win2vncMode.setParam(win2vncCheckbox->value());
+  int edgeIdx = win2vncEdgeChoice->value();
+  if (edgeIdx == 1)
+    win2vncEdge.setParam("Left");
+  else if (edgeIdx == 2)
+    win2vncEdge.setParam("Top");
+  else if (edgeIdx == 3)
+    win2vncEdge.setParam("Bottom");
+  else
+    win2vncEdge.setParam("Right");
+
+  win2vncWidth.setParam(atoi(win2vncWidthInput->value()));
 
   std::map<OptionsCallback*, void*>::const_iterator iter;
 
@@ -1238,6 +1270,51 @@ void OptionsDialog::createDisplayPage(int tx, int ty, int tw, int th)
 }
 
 
+void OptionsDialog::createWin2VNCPage(int tx, int ty, int tw, int th)
+{
+  Fl_Group *group = new Fl_Group(tx, ty, tw, th, "Win2VNC");
+
+  int full_width;
+
+  tx += OUTER_MARGIN;
+  ty += OUTER_MARGIN;
+
+  full_width = tw - OUTER_MARGIN * 2;
+
+  win2vncCheckbox = new Fl_Check_Button(LBLRIGHT(tx, ty,
+                                                CHECK_MIN_WIDTH,
+                                                CHECK_HEIGHT,
+                                                _("Enable Win2VNC screen edge input forwarding")));
+  win2vncCheckbox->callback(handleWin2VNC, this);
+  ty += CHECK_HEIGHT + INNER_MARGIN;
+
+  win2vncGroup = new Fl_Group(tx, ty, full_width, 0);
+  win2vncGroup->box(FL_FLAT_BOX);
+
+  {
+    tx += INDENT;
+
+    win2vncEdgeChoice = new Fl_Choice(tx + 180, ty, 120, INPUT_HEIGHT,
+                                     _("Remote system position:"));
+    win2vncEdgeChoice->add(_("Right edge"));
+    win2vncEdgeChoice->add(_("Left edge"));
+    win2vncEdgeChoice->add(_("Top edge"));
+    win2vncEdgeChoice->add(_("Bottom edge"));
+    ty += INPUT_HEIGHT + INNER_MARGIN;
+
+    win2vncWidthInput = new Fl_Int_Input(tx + 180, ty, 60, INPUT_HEIGHT,
+                                        _("Edge trigger width (px):"));
+    ty += INPUT_HEIGHT + INNER_MARGIN;
+  }
+
+  win2vncGroup->end();
+  win2vncGroup->resizable(nullptr);
+  win2vncGroup->size(win2vncGroup->w(), ty - win2vncGroup->y());
+
+  group->end();
+}
+
+
 void OptionsDialog::createMiscPage(int tx, int ty, int tw, int th)
 {
   Fl_Group *group = new Fl_Group(tx, ty, tw, th, _("Miscellaneous"));
@@ -1296,6 +1373,7 @@ void OptionsDialog::handleCompression(Fl_Widget* /*widget*/, void *data)
 }
 
 
+#ifdef HAVE_GNUTLS
 void OptionsDialog::handleX509(Fl_Widget* /*widget*/, void *data)
 {
   OptionsDialog *dialog = (OptionsDialog*)data;
@@ -1308,8 +1386,9 @@ void OptionsDialog::handleX509(Fl_Widget* /*widget*/, void *data)
     dialog->crlInput->deactivate();
   }
 }
+#endif
 
-
+#ifdef HAVE_NETTLE
 void OptionsDialog::handleRSAAES(Fl_Widget* /*widget*/, void *data)
 {
   OptionsDialog *dialog = (OptionsDialog*)data;
@@ -1319,6 +1398,7 @@ void OptionsDialog::handleRSAAES(Fl_Widget* /*widget*/, void *data)
     dialog->authPlainCheckbox->value(true);
   }
 }
+#endif
 
 
 void OptionsDialog::handleSystemKeys(Fl_Widget* /*widget*/, void* data)
@@ -1468,5 +1548,16 @@ void OptionsDialog::handleAlwaysCursor(Fl_Widget* /*widget*/, void *data)
     dialog->cursorTypeChoice->activate();
   } else {
     dialog->cursorTypeChoice->deactivate();
+  }
+}
+
+void OptionsDialog::handleWin2VNC(Fl_Widget* /*widget*/, void *data)
+{
+  OptionsDialog *dialog = (OptionsDialog*)data;
+
+  if (dialog->win2vncCheckbox->value()) {
+    dialog->win2vncGroup->activate();
+  } else {
+    dialog->win2vncGroup->deactivate();
   }
 }

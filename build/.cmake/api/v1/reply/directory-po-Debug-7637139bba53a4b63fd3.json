@@ -1,0 +1,602 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"po/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 102,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/ar/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/ar.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/bg/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/bg.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/cs/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/cs.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/da/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/da.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/de/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/de.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/el/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/el.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/eo/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/eo.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/es/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/es.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/fi/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/fi.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 10,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/fr/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/fr.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 11,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/fur/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/fur.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/he/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/he.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 13,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/hu/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/hu.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 14,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/id/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/id.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/it/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/it.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 16,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/ka/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/ka.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 17,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/ko/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/ko.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 18,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/nl/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/nl.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 19,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/pl/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/pl.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 20,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/pt_BR/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/pt_BR.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 21,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/ro/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/ro.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 22,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/ru/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/ru.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 23,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/sk/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/sk.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 24,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/sr/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/sr.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 25,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/sv/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/sv.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 26,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/tr/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/tr.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 27,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/uk/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/uk.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 28,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/vi/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/vi.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 29,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/zh_CN/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/zh_CN.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 30,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/locale/zh_TW/LC_MESSAGES",
+			"paths" : 
+			[
+				{
+					"from" : "build/po/zh_TW.mo",
+					"to" : "tigervnc.mo"
+				}
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "po",
+		"source" : "po"
+	}
+}

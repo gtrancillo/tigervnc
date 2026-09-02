@@ -63,7 +63,10 @@ public:
   void setCursor();
 
   // Server-provided cursor position
-  void setCursorPos(const core::Point& pos);
+  void setCursorPos(const core::Point& pos, bool force = false);
+
+  // Warp cursor to absolute screen coordinates
+  void warpCursorToScreen(int rootX, int rootY);
 
   // Change client LED state
   void setLEDState(unsigned int state);
@@ -82,9 +85,13 @@ public:
 
   void fullscreen_on();
 
-  // Grab keyboard events from desktop environment
+  // Grab keyboard & mouse events
   void grabKeyboard();
   void ungrabKeyboard();
+  void grabPointer();
+  void ungrabPointer();
+
+  void applyWin2VNCMode();
 
 private:
   void addOverlayTip(const char *text, ...)
@@ -99,9 +106,6 @@ private:
 
   bool hasFocus();
   static void checkFocus(void *data);
-
-  void grabPointer();
-  void ungrabPointer();
 
   void maximizeWindow();
 

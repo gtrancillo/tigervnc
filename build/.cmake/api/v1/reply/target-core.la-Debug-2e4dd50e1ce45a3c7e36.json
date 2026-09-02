@@ -1,0 +1,128 @@
+{
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"libtool_generate_control_file",
+			"libtool_generate_control_files"
+		],
+		"files" : 
+		[
+			"cmake/Modules/CMakeMacroLibtoolFile.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 498,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 197,
+				"parent" : 2
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "core::@3dcf4b91ab497d8b183b"
+		}
+	],
+	"id" : "core.la::@6890427a1f51a3e7e1df",
+	"name" : "core.la",
+	"orderDependencies" : 
+	[
+		{
+			"id" : "core::@3dcf4b91ab497d8b183b"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"backtraces" : 
+			[
+				3
+			],
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/core.la",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"backtraces" : 
+			[
+				0
+			],
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/core.la.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"backtraces" : 
+			[
+				0
+			],
+			"isGenerated" : true,
+			"path" : "build/common/core/.libcore.la.fresh.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"backtraces" : 
+			[
+				0
+			],
+			"isGenerated" : true,
+			"path" : "build/common/core/.libs/libcore.a.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

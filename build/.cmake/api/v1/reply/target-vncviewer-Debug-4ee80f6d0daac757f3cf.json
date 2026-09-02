@@ -1,0 +1,834 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "vncviewer/vncviewer"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"install",
+			"target_link_libraries",
+			"add_definitions",
+			"add_compile_definitions",
+			"include_directories",
+			"target_include_directories",
+			"target_sources"
+		],
+		"files" : 
+		[
+			"vncviewer/CMakeLists.txt",
+			"common/rfb/CMakeLists.txt",
+			"common/rdr/CMakeLists.txt",
+			"common/core/CMakeLists.txt",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 97,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 71,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 72,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 87,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 88,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 26,
+				"parent" : 8
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 26,
+				"parent" : 10
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 22,
+				"parent" : 12
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 23,
+				"parent" : 12
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 4,
+				"line" : 460,
+				"parent" : 15
+			},
+			{
+				"command" : 4,
+				"file" : 4,
+				"line" : 78,
+				"parent" : 15
+			},
+			{
+				"command" : 3,
+				"file" : 4,
+				"line" : 128,
+				"parent" : 15
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 461,
+				"parent" : 15
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 70,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 69,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 46,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 47,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 48,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	},
+	"compileDependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "rfbclient::@61a7d3afe86932bd99f0"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "rfb::@61a7d3afe86932bd99f0"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "network::@2541921bd286765918af"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "rdr::@aa2c57ea6e5912bfa26f"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "core::@3dcf4b91ab497d8b183b"
+		}
+	],
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 16,
+					"define" : "HAVE_CONFIG_H"
+				},
+				{
+					"backtrace" : 17,
+					"define" : "_FORTIFY_SOURCE=2"
+				},
+				{
+					"backtrace" : 18,
+					"define" : "__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 19,
+					"path" : "/Users/gtrancil/Repos/tigervnc/build"
+				},
+				{
+					"backtrace" : 20,
+					"path" : "/Users/gtrancil/Repos/tigervnc/common"
+				},
+				{
+					"backtrace" : 21,
+					"isSystem" : true,
+					"path" : "/opt/homebrew/include"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/opt/homebrew/include/pixman-1"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				26
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -std=gnu99 -Wall -Wextra -Wformat=2 -Wvla -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 16,
+					"define" : "HAVE_CONFIG_H"
+				},
+				{
+					"backtrace" : 17,
+					"define" : "_FORTIFY_SOURCE=2"
+				},
+				{
+					"backtrace" : 18,
+					"define" : "__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 19,
+					"path" : "/Users/gtrancil/Repos/tigervnc/build"
+				},
+				{
+					"backtrace" : 20,
+					"path" : "/Users/gtrancil/Repos/tigervnc/common"
+				},
+				{
+					"backtrace" : 21,
+					"isSystem" : true,
+					"path" : "/opt/homebrew/include"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/opt/homebrew/include/pixman-1"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				24,
+				25
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "core::@3dcf4b91ab497d8b183b"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "rdr::@aa2c57ea6e5912bfa26f"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "network::@2541921bd286765918af"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "rfb::@61a7d3afe86932bd99f0"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "rfbclient::@61a7d3afe86932bd99f0"
+		}
+	],
+	"id" : "vncviewer::@d5d90580d3a622929f8e",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "/usr/local/bin"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-search_paths_first -Wl,-headerpad_max_install_names",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "../common/rfb/librfbclient.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "../common/rfb/librfb.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "../common/network/libnetwork.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "../common/rdr/librdr.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "../common/core/libcore.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-framework Carbon -framework Cocoa -framework ApplicationServices -lz",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/opt/homebrew/lib/libfltk_images.dylib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/opt/homebrew/lib/libfltk.dylib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-framework Cocoa",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "-framework Carbon",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "-framework IOKit",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "/opt/homebrew/lib/libjpeg.dylib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libz.tbd",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "/opt/homebrew/lib/libintl.dylib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "/opt/homebrew/lib/libpixman-1.dylib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "-framework Carbon",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"linkLibraries" : 
+	[
+		{
+			"backtrace" : 1,
+			"fragment" : "pthread"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "rfbclient::@61a7d3afe86932bd99f0"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "rfb::@61a7d3afe86932bd99f0"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "network::@2541921bd286765918af"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "rdr::@aa2c57ea6e5912bfa26f"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "core::@3dcf4b91ab497d8b183b"
+		},
+		{
+			"backtrace" : 4,
+			"fragment" : "-framework Carbon -framework Cocoa -framework ApplicationServices -lz"
+		},
+		{
+			"backtrace" : 4,
+			"fragment" : "/opt/homebrew/lib/libfltk_images.dylib"
+		},
+		{
+			"backtrace" : 4,
+			"fragment" : "/opt/homebrew/lib/libfltk.dylib"
+		},
+		{
+			"backtrace" : 5,
+			"fragment" : "-framework Cocoa"
+		},
+		{
+			"backtrace" : 6,
+			"fragment" : "-framework Carbon"
+		},
+		{
+			"backtrace" : 7,
+			"fragment" : "-framework IOKit"
+		}
+	],
+	"name" : "vncviewer",
+	"nameOnDisk" : "vncviewer",
+	"paths" : 
+	{
+		"build" : "vncviewer",
+		"source" : "vncviewer"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/fltk/Fl_Monitor_Arrangement.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/fltk/Fl_Suggestion_Item_.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/fltk/Fl_Suggestion_Window_.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/fltk/Fl_Suggestion_Input.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/fltk/Fl_Navigation.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/fltk/event_dispatch_handler.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/fltk/theme.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/AuthDialog.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/BaseTouchHandler.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/CConn.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/DesktopWindow.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/EmulateMB.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/ServerDialog.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/ShortcutHandler.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/Surface.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/OptionsDialog.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/PlatformPixelBuffer.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/Viewport.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/parameters.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/touch.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/MonitorIndicesParameter.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/vncviewer.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 22,
+			"backtraces" : 
+			[
+				22
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/cocoa.mm",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 23,
+			"backtraces" : 
+			[
+				23
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/KeyboardMacOS.mm",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 23,
+			"backtraces" : 
+			[
+				23
+			],
+			"compileGroupIndex" : 1,
+			"path" : "vncviewer/osx_to_qnum.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 23,
+			"backtraces" : 
+			[
+				23
+			],
+			"compileGroupIndex" : 1,
+			"path" : "vncviewer/keysym2ucs.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 24,
+			"backtraces" : 
+			[
+				24
+			],
+			"compileGroupIndex" : 0,
+			"path" : "vncviewer/Surface_OSX.cxx",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

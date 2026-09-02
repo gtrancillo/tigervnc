@@ -1,0 +1,19 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "common/rdr",
+		"source" : "common/rdr"
+	}
+}

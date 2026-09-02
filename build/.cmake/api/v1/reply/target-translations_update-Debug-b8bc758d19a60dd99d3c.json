@@ -1,0 +1,79 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"po/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 71,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	},
+	"id" : "translations_update::@fde6a12a88756396f0e5",
+	"name" : "translations_update",
+	"paths" : 
+	{
+		"build" : "po",
+		"source" : "po"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"isGenerated" : true,
+			"path" : "build/po/CMakeFiles/translations_update",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"backtraces" : 
+			[
+				0
+			],
+			"isGenerated" : true,
+			"path" : "build/po/CMakeFiles/translations_update.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

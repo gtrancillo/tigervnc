@@ -99,7 +99,8 @@ Viewport::Viewport(int w, int h, CConn* cc_)
     keyboard(nullptr), shortcutBypass(false), shortcutActive(false),
     firstLEDState(true), pendingClientClipboard(false),
     menuCtrlKey(false), menuAltKey(false), cursor(nullptr),
-    cursorIsBlank(false)
+    cursorIsBlank(false), win2vncForwarding(false),
+    win2vncRemotePos(0, 0), win2vncLastRootPos(0, 0)
 {
 #if defined(WIN32)
   keyboard = new KeyboardWin32(this);
@@ -652,7 +653,145 @@ void Viewport::flushPendingClipboard()
 void Viewport::handlePointerEvent(const core::Point& pos,
                                   uint16_t buttonMask)
 {
+  if (win2vncMode && !win2vncForwarding) {
+    // Mouse just entered the edge strip — start forwarding
+    win2vncForwarding = true;
+
+    std::string edge = win2vncEdge.getValueStr();
+    int rootX = Fl::event_x_root();
+    int rootY = Fl::event_y_root();
+
+    int sx = 0, sy = 0, sw = 1, sh = 1;
+    Fl::screen_work_area(sx, sy, sw, sh, rootX, rootY);
+    sw = std::max(1, sw);
+    sh = std::max(1, sh);
+
+    int relY = rootY - sy;
+    int relX = rootX - sx;
+    int remoteW = cc->server.width();
+    int remoteH = cc->server.height();
+
+    if (edge == "Left") {
+      win2vncRemotePos.x = remoteW - 5;
+      win2vncRemotePos.y = (relY * remoteH) / sh;
+    } else if (edge == "Top") {
+      win2vncRemotePos.x = (relX * remoteW) / sw;
+      win2vncRemotePos.y = remoteH - 5;
+    } else if (edge == "Bottom") {
+      win2vncRemotePos.x = (relX * remoteW) / sw;
+      win2vncRemotePos.y = 5;
+    } else {
+      win2vncRemotePos.x = 5;
+      win2vncRemotePos.y = (relY * remoteH) / sh;
+    }
+
+    win2vncLastRootPos = core::Point(rootX, rootY);
+
+    // Hide cursor and dissociate mouse position on macOS
+#ifdef __APPLE__
+    CGAssociateMouseAndMouseCursorPosition(false);
+    CGDisplayHideCursor(kCGDirectMainDisplay);
+#endif
+
+    // Install global handler to track all mouse movement
+    win2vncActiveViewport = this;
+    Fl::add_handler(Viewport::win2vncGlobalHandler);
+
+    filterPointerEvent(win2vncRemotePos, buttonMask);
+    return;
+  }
+
+  if (win2vncMode && win2vncForwarding) {
+    // Already forwarding — handled by global handler, ignore here
+    return;
+  }
+
   filterPointerEvent(pos, buttonMask);
+}
+
+
+// Static: currently active Win2VNC viewport (only one at a time)
+static Viewport* win2vncActiveViewport = nullptr;
+
+void Viewport::win2vncProcessMouse(int rootX, int rootY, uint16_t buttonMask)
+{
+  int dx = rootX - win2vncLastRootPos.x;
+  int dy = rootY - win2vncLastRootPos.y;
+  win2vncLastRootPos = core::Point(rootX, rootY);
+
+  if (dx == 0 && dy == 0)
+    return;
+
+  win2vncRemotePos.x += dx;
+  win2vncRemotePos.y += dy;
+
+  std::string edge = win2vncEdge.getValueStr();
+  int remoteW = cc->server.width();
+  int remoteH = cc->server.height();
+  bool returnControl = false;
+
+  if (edge == "Right" && win2vncRemotePos.x < 0)
+    returnControl = true;
+  else if (edge == "Left" && win2vncRemotePos.x >= remoteW)
+    returnControl = true;
+  else if (edge == "Top" && win2vncRemotePos.y >= remoteH)
+    returnControl = true;
+  else if (edge == "Bottom" && win2vncRemotePos.y < 0)
+    returnControl = true;
+
+  if (returnControl) {
+    win2vncStopForwarding();
+    return;
+  }
+
+  win2vncRemotePos.x = std::max(0, std::min(remoteW - 1, win2vncRemotePos.x));
+  win2vncRemotePos.y = std::max(0, std::min(remoteH - 1, win2vncRemotePos.y));
+
+  filterPointerEvent(win2vncRemotePos, buttonMask);
+}
+
+void Viewport::win2vncStopForwarding()
+{
+  win2vncForwarding = false;
+  win2vncActiveViewport = nullptr;
+
+  // Remove global handler
+  Fl::remove_handler(Viewport::win2vncGlobalHandler);
+
+  // Re-associate cursor and show it
+#ifdef __APPLE__
+  CGAssociateMouseAndMouseCursorPosition(true);
+  CGDisplayShowCursor(kCGDirectMainDisplay);
+#endif
+}
+
+int Viewport::win2vncGlobalHandler(int event)
+{
+  Viewport *vp = win2vncActiveViewport;
+
+  if (!vp || !vp->win2vncForwarding)
+    return 0;
+
+  switch (event) {
+  case FL_MOVE:
+  case FL_DRAG:
+  case FL_PUSH:
+  case FL_RELEASE:
+  {
+    uint16_t buttonMask = 0;
+    if (Fl::event_button1())
+      buttonMask |= 1 << 0;
+    if (Fl::event_button2())
+      buttonMask |= 1 << 1;
+    if (Fl::event_button3())
+      buttonMask |= 1 << 2;
+
+    vp->win2vncProcessMouse(Fl::event_x_root(), Fl::event_y_root(), buttonMask);
+    return 1; // consumed
+  }
+  default:
+    return 0;
+  }
 }
 
 
@@ -810,6 +949,12 @@ void Viewport::handleKeyPress(int systemKeyCode,
     }
   }
 
+  if (win2vncMode && win2vncForwarding && keySym == XK_Scroll_Lock) {
+    win2vncForwarding = false;
+    Fl::grab(nullptr);
+    return;
+  }
+
   // Normal key, so send to server...
 
   sendKeyPress(systemKeyCode, keyCode, keySym);
@@ -870,6 +1015,10 @@ void Viewport::handleKeyRelease(int systemKeyCode)
       win = dynamic_cast<DesktopWindow*>(window());
       assert(win);
       win->ungrabKeyboard();
+      if (win2vncMode && win2vncForwarding) {
+        win2vncForwarding = false;
+        win->ungrabPointer();
+      }
 
       return;
     }

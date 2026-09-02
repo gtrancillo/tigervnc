@@ -1,0 +1,261 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"vncviewer/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 97,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 99,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 136,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 166,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 169,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 169,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 169,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 169,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 169,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 169,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 169,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 171,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/bin",
+			"paths" : 
+			[
+				"vncviewer/vncviewer"
+			],
+			"targetId" : "vncviewer::@d5d90580d3a622929f8e",
+			"targetIndex" : 24,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "vncviewer::@d5d90580d3a622929f8e",
+				"index" : 24
+			},
+			"destination" : "/usr/local/bin",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/man/man1",
+			"paths" : 
+			[
+				{
+					"from" : "vncviewer/vncviewer.man",
+					"to" : "vncviewer.1"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/applications",
+			"paths" : 
+			[
+				"build/vncviewer/vncviewer.desktop"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/metainfo",
+			"paths" : 
+			[
+				"build/vncviewer/org.tigervnc.vncviewer.metainfo.xml"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/icons/hicolor/16x16/apps",
+			"paths" : 
+			[
+				{
+					"from" : "vncviewer/../media/icons/tigervnc_16.png",
+					"to" : "tigervnc.png"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/icons/hicolor/22x22/apps",
+			"paths" : 
+			[
+				{
+					"from" : "vncviewer/../media/icons/tigervnc_22.png",
+					"to" : "tigervnc.png"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/icons/hicolor/24x24/apps",
+			"paths" : 
+			[
+				{
+					"from" : "vncviewer/../media/icons/tigervnc_24.png",
+					"to" : "tigervnc.png"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/icons/hicolor/32x32/apps",
+			"paths" : 
+			[
+				{
+					"from" : "vncviewer/../media/icons/tigervnc_32.png",
+					"to" : "tigervnc.png"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/icons/hicolor/48x48/apps",
+			"paths" : 
+			[
+				{
+					"from" : "vncviewer/../media/icons/tigervnc_48.png",
+					"to" : "tigervnc.png"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 10,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/icons/hicolor/64x64/apps",
+			"paths" : 
+			[
+				{
+					"from" : "vncviewer/../media/icons/tigervnc_64.png",
+					"to" : "tigervnc.png"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 11,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/icons/hicolor/128x128/apps",
+			"paths" : 
+			[
+				{
+					"from" : "vncviewer/../media/icons/tigervnc_128.png",
+					"to" : "tigervnc.png"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/share/icons/hicolor/scalable/apps",
+			"paths" : 
+			[
+				"vncviewer/../media/icons/tigervnc.svg"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "vncviewer",
+		"source" : "vncviewer"
+	}
+}

@@ -1,0 +1,758 @@
+[
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/core",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/core.dir/Configuration.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/core/Configuration.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/core/Configuration.cxx",
+  "output": "common/core/CMakeFiles/core.dir/Configuration.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/core",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/core.dir/Exception.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/core/Exception.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/core/Exception.cxx",
+  "output": "common/core/CMakeFiles/core.dir/Exception.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/core",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/core.dir/Logger.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/core/Logger.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/core/Logger.cxx",
+  "output": "common/core/CMakeFiles/core.dir/Logger.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/core",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/core.dir/Logger_file.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/core/Logger_file.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/core/Logger_file.cxx",
+  "output": "common/core/CMakeFiles/core.dir/Logger_file.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/core",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/core.dir/Logger_stdio.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/core/Logger_stdio.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/core/Logger_stdio.cxx",
+  "output": "common/core/CMakeFiles/core.dir/Logger_stdio.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/core",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/core.dir/LogWriter.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/core/LogWriter.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/core/LogWriter.cxx",
+  "output": "common/core/CMakeFiles/core.dir/LogWriter.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/core",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/core.dir/Region.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/core/Region.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/core/Region.cxx",
+  "output": "common/core/CMakeFiles/core.dir/Region.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/core",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/core.dir/Timer.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/core/Timer.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/core/Timer.cxx",
+  "output": "common/core/CMakeFiles/core.dir/Timer.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/core",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/core.dir/i18n.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/core/i18n.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/core/i18n.cxx",
+  "output": "common/core/CMakeFiles/core.dir/i18n.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/core",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/core.dir/string.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/core/string.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/core/string.cxx",
+  "output": "common/core/CMakeFiles/core.dir/string.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/core",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/core.dir/time.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/core/time.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/core/time.cxx",
+  "output": "common/core/CMakeFiles/core.dir/time.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/core",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/core.dir/xdgdirs.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/core/xdgdirs.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/core/xdgdirs.cxx",
+  "output": "common/core/CMakeFiles/core.dir/xdgdirs.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/core",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/core.dir/Logger_syslog.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/core/Logger_syslog.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/core/Logger_syslog.cxx",
+  "output": "common/core/CMakeFiles/core.dir/Logger_syslog.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rdr",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rdr.dir/AESInStream.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rdr/AESInStream.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rdr/AESInStream.cxx",
+  "output": "common/rdr/CMakeFiles/rdr.dir/AESInStream.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rdr",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rdr.dir/AESOutStream.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rdr/AESOutStream.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rdr/AESOutStream.cxx",
+  "output": "common/rdr/CMakeFiles/rdr.dir/AESOutStream.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rdr",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rdr.dir/BufferedInStream.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rdr/BufferedInStream.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rdr/BufferedInStream.cxx",
+  "output": "common/rdr/CMakeFiles/rdr.dir/BufferedInStream.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rdr",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rdr.dir/BufferedOutStream.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rdr/BufferedOutStream.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rdr/BufferedOutStream.cxx",
+  "output": "common/rdr/CMakeFiles/rdr.dir/BufferedOutStream.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rdr",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rdr.dir/FdInStream.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rdr/FdInStream.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rdr/FdInStream.cxx",
+  "output": "common/rdr/CMakeFiles/rdr.dir/FdInStream.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rdr",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rdr.dir/FdOutStream.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rdr/FdOutStream.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rdr/FdOutStream.cxx",
+  "output": "common/rdr/CMakeFiles/rdr.dir/FdOutStream.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rdr",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rdr.dir/FileInStream.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rdr/FileInStream.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rdr/FileInStream.cxx",
+  "output": "common/rdr/CMakeFiles/rdr.dir/FileInStream.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rdr",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rdr.dir/HexInStream.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rdr/HexInStream.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rdr/HexInStream.cxx",
+  "output": "common/rdr/CMakeFiles/rdr.dir/HexInStream.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rdr",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rdr.dir/HexOutStream.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rdr/HexOutStream.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rdr/HexOutStream.cxx",
+  "output": "common/rdr/CMakeFiles/rdr.dir/HexOutStream.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rdr",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rdr.dir/RandomStream.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rdr/RandomStream.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rdr/RandomStream.cxx",
+  "output": "common/rdr/CMakeFiles/rdr.dir/RandomStream.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rdr",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rdr.dir/TLSException.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rdr/TLSException.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rdr/TLSException.cxx",
+  "output": "common/rdr/CMakeFiles/rdr.dir/TLSException.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rdr",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rdr.dir/TLSInStream.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rdr/TLSInStream.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rdr/TLSInStream.cxx",
+  "output": "common/rdr/CMakeFiles/rdr.dir/TLSInStream.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rdr",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rdr.dir/TLSOutStream.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rdr/TLSOutStream.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rdr/TLSOutStream.cxx",
+  "output": "common/rdr/CMakeFiles/rdr.dir/TLSOutStream.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rdr",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rdr.dir/TLSSocket.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rdr/TLSSocket.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rdr/TLSSocket.cxx",
+  "output": "common/rdr/CMakeFiles/rdr.dir/TLSSocket.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rdr",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rdr.dir/ZlibInStream.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rdr/ZlibInStream.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rdr/ZlibInStream.cxx",
+  "output": "common/rdr/CMakeFiles/rdr.dir/ZlibInStream.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rdr",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rdr.dir/ZlibOutStream.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rdr/ZlibOutStream.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rdr/ZlibOutStream.cxx",
+  "output": "common/rdr/CMakeFiles/rdr.dir/ZlibOutStream.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/network",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/network.dir/Socket.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/network/Socket.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/network/Socket.cxx",
+  "output": "common/network/CMakeFiles/network.dir/Socket.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/network",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/network.dir/TcpSocket.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/network/TcpSocket.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/network/TcpSocket.cxx",
+  "output": "common/network/CMakeFiles/network.dir/TcpSocket.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/network",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/network.dir/UnixSocket.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/network/UnixSocket.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/network/UnixSocket.cxx",
+  "output": "common/network/CMakeFiles/network.dir/UnixSocket.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfb.dir/AccessRights.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/AccessRights.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/AccessRights.cxx",
+  "output": "common/rfb/CMakeFiles/rfb.dir/AccessRights.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfb.dir/Blacklist.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/Blacklist.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/Blacklist.cxx",
+  "output": "common/rfb/CMakeFiles/rfb.dir/Blacklist.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfb.dir/Congestion.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/Congestion.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/Congestion.cxx",
+  "output": "common/rfb/CMakeFiles/rfb.dir/Congestion.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfb.dir/ComparingUpdateTracker.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/ComparingUpdateTracker.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/ComparingUpdateTracker.cxx",
+  "output": "common/rfb/CMakeFiles/rfb.dir/ComparingUpdateTracker.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfb.dir/Cursor.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/Cursor.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/Cursor.cxx",
+  "output": "common/rfb/CMakeFiles/rfb.dir/Cursor.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu99 -Wall -Wextra -Wformat=2 -Wvla -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfb.dir/d3des.c.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/d3des.c",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/d3des.c",
+  "output": "common/rfb/CMakeFiles/rfb.dir/d3des.c.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfb.dir/JpegCompressor.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/JpegCompressor.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/JpegCompressor.cxx",
+  "output": "common/rfb/CMakeFiles/rfb.dir/JpegCompressor.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfb.dir/JpegDecompressor.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/JpegDecompressor.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/JpegDecompressor.cxx",
+  "output": "common/rfb/CMakeFiles/rfb.dir/JpegDecompressor.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfb.dir/KeyRemapper.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/KeyRemapper.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/KeyRemapper.cxx",
+  "output": "common/rfb/CMakeFiles/rfb.dir/KeyRemapper.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu99 -Wall -Wextra -Wformat=2 -Wvla -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfb.dir/KeysymStr.c.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/KeysymStr.c",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/KeysymStr.c",
+  "output": "common/rfb/CMakeFiles/rfb.dir/KeysymStr.c.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfb.dir/PixelBuffer.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/PixelBuffer.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/PixelBuffer.cxx",
+  "output": "common/rfb/CMakeFiles/rfb.dir/PixelBuffer.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfb.dir/PixelFormat.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/PixelFormat.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/PixelFormat.cxx",
+  "output": "common/rfb/CMakeFiles/rfb.dir/PixelFormat.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfb.dir/Security.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/Security.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/Security.cxx",
+  "output": "common/rfb/CMakeFiles/rfb.dir/Security.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfb.dir/UpdateTracker.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/UpdateTracker.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/UpdateTracker.cxx",
+  "output": "common/rfb/CMakeFiles/rfb.dir/UpdateTracker.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfb.dir/encodings.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/encodings.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/encodings.cxx",
+  "output": "common/rfb/CMakeFiles/rfb.dir/encodings.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfb.dir/obfuscate.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/obfuscate.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/obfuscate.cxx",
+  "output": "common/rfb/CMakeFiles/rfb.dir/obfuscate.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/ClientParams.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/ClientParams.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/ClientParams.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/ClientParams.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/EncodeManager.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/EncodeManager.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/EncodeManager.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/EncodeManager.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/Encoder.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/Encoder.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/Encoder.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/Encoder.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/HextileEncoder.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/HextileEncoder.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/HextileEncoder.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/HextileEncoder.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/JPEGEncoder.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/JPEGEncoder.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/JPEGEncoder.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/JPEGEncoder.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/RREEncoder.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/RREEncoder.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/RREEncoder.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/RREEncoder.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/RawEncoder.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/RawEncoder.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/RawEncoder.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/RawEncoder.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/SConnection.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/SConnection.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/SConnection.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/SConnection.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/SMsgReader.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/SMsgReader.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/SMsgReader.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/SMsgReader.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/SMsgWriter.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/SMsgWriter.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/SMsgWriter.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/SMsgWriter.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/ServerCore.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/ServerCore.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/ServerCore.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/ServerCore.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/SecurityServer.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/SecurityServer.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/SecurityServer.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/SecurityServer.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/SSecurityPlain.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/SSecurityPlain.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/SSecurityPlain.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/SSecurityPlain.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/SSecurityStack.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/SSecurityStack.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/SSecurityStack.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/SSecurityStack.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/SSecurityVncAuth.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/SSecurityVncAuth.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/SSecurityVncAuth.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/SSecurityVncAuth.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/SSecurityVeNCrypt.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/SSecurityVeNCrypt.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/SSecurityVeNCrypt.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/SSecurityVeNCrypt.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/TightEncoder.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/TightEncoder.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/TightEncoder.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/TightEncoder.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/TightJPEGEncoder.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/TightJPEGEncoder.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/TightJPEGEncoder.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/TightJPEGEncoder.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/VNCSConnectionST.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/VNCSConnectionST.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/VNCSConnectionST.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/VNCSConnectionST.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/VNCServerST.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/VNCServerST.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/VNCServerST.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/VNCServerST.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -fPIC -o CMakeFiles/rfbserver.dir/ZRLEEncoder.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/ZRLEEncoder.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/ZRLEEncoder.cxx",
+  "output": "common/rfb/CMakeFiles/rfbserver.dir/ZRLEEncoder.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/CConnection.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/CConnection.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/CConnection.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/CConnection.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/CMsgReader.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/CMsgReader.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/CMsgReader.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/CMsgReader.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/CMsgWriter.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/CMsgWriter.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/CMsgWriter.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/CMsgWriter.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/CSecurityPlain.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/CSecurityPlain.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/CSecurityPlain.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/CSecurityPlain.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/CSecurityStack.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/CSecurityStack.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/CSecurityStack.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/CSecurityStack.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/CSecurityVeNCrypt.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/CSecurityVeNCrypt.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/CSecurityVeNCrypt.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/CSecurityVeNCrypt.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/CSecurityVncAuth.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/CSecurityVncAuth.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/CSecurityVncAuth.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/CSecurityVncAuth.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/CopyRectDecoder.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/CopyRectDecoder.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/CopyRectDecoder.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/CopyRectDecoder.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/DecodeManager.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/DecodeManager.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/DecodeManager.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/DecodeManager.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/Decoder.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/Decoder.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/Decoder.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/Decoder.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/HextileDecoder.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/HextileDecoder.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/HextileDecoder.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/HextileDecoder.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/JPEGDecoder.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/JPEGDecoder.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/JPEGDecoder.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/JPEGDecoder.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/RREDecoder.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/RREDecoder.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/RREDecoder.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/RREDecoder.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/RawDecoder.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/RawDecoder.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/RawDecoder.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/RawDecoder.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/SecurityClient.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/SecurityClient.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/SecurityClient.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/SecurityClient.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/ServerParams.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/ServerParams.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/ServerParams.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/ServerParams.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/TightDecoder.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/TightDecoder.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/TightDecoder.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/TightDecoder.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/ZRLEDecoder.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/ZRLEDecoder.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/ZRLEDecoder.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/ZRLEDecoder.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/H264Decoder.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/H264Decoder.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/H264Decoder.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/H264Decoder.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/common/rfb",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/rfbclient.dir/H264DecoderContext.cxx.o -c /Users/gtrancil/Repos/tigervnc/common/rfb/H264DecoderContext.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/common/rfb/H264DecoderContext.cxx",
+  "output": "common/rfb/CMakeFiles/rfbclient.dir/H264DecoderContext.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/fltk/Fl_Monitor_Arrangement.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/fltk/Fl_Monitor_Arrangement.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/fltk/Fl_Monitor_Arrangement.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/fltk/Fl_Monitor_Arrangement.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/fltk/Fl_Suggestion_Item_.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/fltk/Fl_Suggestion_Item_.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/fltk/Fl_Suggestion_Item_.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/fltk/Fl_Suggestion_Item_.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/fltk/Fl_Suggestion_Window_.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/fltk/Fl_Suggestion_Window_.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/fltk/Fl_Suggestion_Window_.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/fltk/Fl_Suggestion_Window_.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/fltk/Fl_Suggestion_Input.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/fltk/Fl_Suggestion_Input.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/fltk/Fl_Suggestion_Input.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/fltk/Fl_Suggestion_Input.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/fltk/Fl_Navigation.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/fltk/Fl_Navigation.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/fltk/Fl_Navigation.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/fltk/Fl_Navigation.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/fltk/event_dispatch_handler.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/fltk/event_dispatch_handler.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/fltk/event_dispatch_handler.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/fltk/event_dispatch_handler.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/fltk/theme.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/fltk/theme.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/fltk/theme.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/fltk/theme.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/AuthDialog.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/AuthDialog.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/AuthDialog.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/AuthDialog.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/BaseTouchHandler.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/BaseTouchHandler.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/BaseTouchHandler.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/BaseTouchHandler.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/CConn.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/CConn.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/CConn.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/CConn.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/DesktopWindow.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/DesktopWindow.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/DesktopWindow.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/DesktopWindow.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/EmulateMB.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/EmulateMB.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/EmulateMB.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/EmulateMB.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/ServerDialog.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/ServerDialog.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/ServerDialog.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/ServerDialog.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/ShortcutHandler.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/ShortcutHandler.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/ShortcutHandler.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/ShortcutHandler.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/Surface.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/Surface.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/Surface.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/Surface.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/OptionsDialog.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/OptionsDialog.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/OptionsDialog.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/OptionsDialog.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/PlatformPixelBuffer.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/PlatformPixelBuffer.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/PlatformPixelBuffer.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/PlatformPixelBuffer.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/Viewport.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/Viewport.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/Viewport.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/Viewport.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/parameters.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/parameters.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/parameters.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/parameters.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/touch.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/touch.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/touch.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/touch.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/MonitorIndicesParameter.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/MonitorIndicesParameter.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/MonitorIndicesParameter.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/MonitorIndicesParameter.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/vncviewer.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/vncviewer.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/vncviewer.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/vncviewer.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/cocoa.mm.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/cocoa.mm",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/cocoa.mm",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/cocoa.mm.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/KeyboardMacOS.mm.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/KeyboardMacOS.mm",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/KeyboardMacOS.mm",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/KeyboardMacOS.mm.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu99 -Wall -Wextra -Wformat=2 -Wvla -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/osx_to_qnum.c.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/osx_to_qnum.c",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/osx_to_qnum.c",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/osx_to_qnum.c.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu99 -Wall -Wextra -Wformat=2 -Wvla -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/keysym2ucs.c.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/keysym2ucs.c",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/keysym2ucs.c",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/keysym2ucs.c.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/vncviewer",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/vncviewer.dir/Surface_OSX.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/Surface_OSX.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/Surface_OSX.cxx",
+  "output": "vncviewer/CMakeFiles/vncviewer.dir/Surface_OSX.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/tests/perf",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/test_util.dir/util.cxx.o -c /Users/gtrancil/Repos/tigervnc/tests/perf/util.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/tests/perf/util.cxx",
+  "output": "tests/perf/CMakeFiles/test_util.dir/util.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/tests/perf",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/convperf.dir/convperf.cxx.o -c /Users/gtrancil/Repos/tigervnc/tests/perf/convperf.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/tests/perf/convperf.cxx",
+  "output": "tests/perf/CMakeFiles/convperf.dir/convperf.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/tests/perf",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/decperf.dir/decperf.cxx.o -c /Users/gtrancil/Repos/tigervnc/tests/perf/decperf.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/tests/perf/decperf.cxx",
+  "output": "tests/perf/CMakeFiles/decperf.dir/decperf.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/tests/perf",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/encperf.dir/encperf.cxx.o -c /Users/gtrancil/Repos/tigervnc/tests/perf/encperf.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/tests/perf/encperf.cxx",
+  "output": "tests/perf/CMakeFiles/encperf.dir/encperf.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/tests/perf",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/fbperf.dir/fbperf.cxx.o -c /Users/gtrancil/Repos/tigervnc/tests/perf/fbperf.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/tests/perf/fbperf.cxx",
+  "output": "tests/perf/CMakeFiles/fbperf.dir/fbperf.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/tests/perf",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/fbperf.dir/__/__/vncviewer/PlatformPixelBuffer.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/PlatformPixelBuffer.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/PlatformPixelBuffer.cxx",
+  "output": "tests/perf/CMakeFiles/fbperf.dir/__/__/vncviewer/PlatformPixelBuffer.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/tests/perf",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/fbperf.dir/__/__/vncviewer/Surface.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/Surface.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/Surface.cxx",
+  "output": "tests/perf/CMakeFiles/fbperf.dir/__/__/vncviewer/Surface.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/tests/perf",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/fbperf.dir/__/__/vncviewer/Surface_OSX.cxx.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/Surface_OSX.cxx",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/Surface_OSX.cxx",
+  "output": "tests/perf/CMakeFiles/fbperf.dir/__/__/vncviewer/Surface_OSX.cxx.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/tests/perf",
+  "command": "/usr/bin/clang -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu99 -Wall -Wextra -Wformat=2 -Wvla -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/fbperf.dir/__/__/vncviewer/keysym2ucs.c.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/keysym2ucs.c",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/keysym2ucs.c",
+  "output": "tests/perf/CMakeFiles/fbperf.dir/__/__/vncviewer/keysym2ucs.c.o"
+},
+{
+  "directory": "/Users/gtrancil/Repos/tigervnc/build/tests/perf",
+  "command": "/usr/bin/clang++ -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -I/Users/gtrancil/Repos/tigervnc/build -I/Users/gtrancil/Repos/tigervnc/common -isystem /opt/homebrew/include -isystem /opt/homebrew/include/pixman-1  -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64 -o CMakeFiles/fbperf.dir/__/__/vncviewer/cocoa.mm.o -c /Users/gtrancil/Repos/tigervnc/vncviewer/cocoa.mm",
+  "file": "/Users/gtrancil/Repos/tigervnc/vncviewer/cocoa.mm",
+  "output": "tests/perf/CMakeFiles/fbperf.dir/__/__/vncviewer/cocoa.mm.o"
+}
+]

@@ -190,6 +190,22 @@ core::BoolParameter
                true);
 
 core::BoolParameter
+  win2vncMode("Win2VNCMode",
+              _("Enable Win2VNC screen edge input forwarding mode"),
+              false);
+core::EnumParameter
+  win2vncEdge("Win2VNCEdge",
+              core::format(
+                "%s (%s)",
+                _("Screen edge where remote system is located"),
+                "Right, Left, Top, Bottom").c_str(),
+              {"Right", "Left", "Top", "Bottom"}, "Right");
+core::IntParameter
+  win2vncWidth("Win2VNCWidth",
+               _("Thickness in pixels of the Win2VNC trigger strip along the screen edge"),
+               3, 1, 50);
+
+core::BoolParameter
   viewOnly("ViewOnly",
            _("Don't send any mouse or keyboard events to the server"),
            false);
@@ -288,6 +304,9 @@ static core::VoidParameter* parameterArray[] = {
   &fullScreen,
   &fullScreenMode,
   &fullScreenSelectedMonitors,
+  &win2vncMode,
+  &win2vncEdge,
+  &win2vncWidth,
   /* Input */
   &viewOnly,
   &emulateMiddleButton,

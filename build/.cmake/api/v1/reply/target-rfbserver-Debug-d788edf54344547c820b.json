@@ -1,0 +1,513 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "common/rfb/librfbserver.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"add_definitions",
+			"add_compile_definitions",
+			"include_directories",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"common/rfb/CMakeLists.txt",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 28,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 52,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 460,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 78,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 461,
+				"parent" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 51,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	},
+	"compileDependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "core::@3dcf4b91ab497d8b183b"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "rdr::@aa2c57ea6e5912bfa26f"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "network::@2541921bd286765918af"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "rfb::@61a7d3afe86932bd99f0"
+		}
+	],
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -std=gnu++11 -Wall -Wextra -Wformat=2 -Wvla -Wzero-as-null-pointer-constant -Wsuggest-override -Wshadow -Wno-format-nonliteral -Wno-format-security -g -D_DEBUG -Og -Werror -arch arm64"
+				},
+				{
+					"fragment" : "-fPIC"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 4,
+					"define" : "HAVE_CONFIG_H"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "_FORTIFY_SOURCE=2"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 7,
+					"path" : "/Users/gtrancil/Repos/tigervnc/build"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/Users/gtrancil/Repos/tigervnc/common"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/opt/homebrew/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/opt/homebrew/include/pixman-1"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "core::@3dcf4b91ab497d8b183b"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "rdr::@aa2c57ea6e5912bfa26f"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "network::@2541921bd286765918af"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "rfb::@61a7d3afe86932bd99f0"
+		}
+	],
+	"id" : "rfbserver::@61a7d3afe86932bd99f0",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "core::@3dcf4b91ab497d8b183b"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "rdr::@aa2c57ea6e5912bfa26f"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "network::@2541921bd286765918af"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "rfb::@61a7d3afe86932bd99f0"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 1,
+			"fragment" : "pthread"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "core::@3dcf4b91ab497d8b183b"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "rdr::@aa2c57ea6e5912bfa26f"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "network::@2541921bd286765918af"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "rfb::@61a7d3afe86932bd99f0"
+		}
+	],
+	"linkLibraries" : 
+	[
+		{
+			"backtrace" : 1,
+			"fragment" : "pthread"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "core::@3dcf4b91ab497d8b183b"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "rdr::@aa2c57ea6e5912bfa26f"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "network::@2541921bd286765918af"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "rfb::@61a7d3afe86932bd99f0"
+		}
+	],
+	"name" : "rfbserver",
+	"nameOnDisk" : "librfbserver.a",
+	"paths" : 
+	{
+		"build" : "common/rfb",
+		"source" : "common/rfb"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/ClientParams.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/EncodeManager.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/Encoder.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/HextileEncoder.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/JPEGEncoder.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/RREEncoder.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/RawEncoder.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/SConnection.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/SMsgReader.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/SMsgWriter.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/ServerCore.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/SecurityServer.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/SSecurityPlain.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/SSecurityStack.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/SSecurityVncAuth.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/SSecurityVeNCrypt.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/TightEncoder.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/TightJPEGEncoder.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/VNCSConnectionST.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/VNCServerST.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "common/rfb/ZRLEEncoder.cxx",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

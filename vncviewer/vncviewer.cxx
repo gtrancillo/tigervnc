@@ -351,6 +351,7 @@ static void init_fltk()
   Fl_File_Chooser::hidden_label = _("Show hidden files");
 
 #ifdef __APPLE__
+#if FL_MAJOR_VERSION == 1 && FL_MINOR_VERSION < 4
   Fl_Mac_App_Menu::about = _("About TigerVNC");
   Fl_Mac_App_Menu::print = ""; // Don't want the print item
   Fl_Mac_App_Menu::services = _("Services");
@@ -360,6 +361,7 @@ static void init_fltk()
   Fl_Mac_App_Menu::quit = _("Quit TigerVNC");
 
   fl_mac_set_about(about_callback, nullptr);
+#endif
 
   Fl_Sys_Menu_Bar *menubar;
   menubar = new Fl_Sys_Menu_Bar(0, 0, 500, 25);

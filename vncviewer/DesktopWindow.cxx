@@ -411,9 +411,9 @@ void DesktopWindow::setCursor()
 }
 
 
-void DesktopWindow::setCursorPos(const core::Point& pos)
+void DesktopWindow::setCursorPos(const core::Point& pos, bool force)
 {
-  if (!mouseGrabbed) {
+  if (!mouseGrabbed && !force) {
     // Do nothing if we do not have the mouse captured.
     return;
   }
@@ -431,9 +431,67 @@ void DesktopWindow::setCursorPos(const core::Point& pos)
 #endif
 }
 
+void DesktopWindow::warpCursorToScreen(int rootX, int rootY)
+{
+#if defined(WIN32)
+  SetCursorPos(rootX, rootY);
+#elif defined(__APPLE__)
+  CGPoint new_pos;
+  new_pos.x = rootX;
+  new_pos.y = rootY;
+  CGWarpMouseCursorPosition(new_pos);
+#else // Assume this is Xlib
+  x11_warp_pointer(rootX, rootY);
+#endif
+}
+
+
+void DesktopWindow::applyWin2VNCMode()
+{
+  if (!win2vncMode)
+    return;
+
+  int sx = 0, sy = 0, sw = 0, sh = 0;
+  int mx = 0, my = 0;
+  Fl::get_mouse(mx, my);
+  Fl::screen_work_area(sx, sy, sw, sh, mx, my);
+
+  int width = win2vncWidth;
+  int wx = sx, wy = sy, ww = sw, wh = sh;
+
+  std::string edge = win2vncEdge.getValueStr();
+  if (edge == "Left") {
+    wx = sx;
+    wy = sy;
+    ww = width;
+    wh = sh;
+  } else if (edge == "Top") {
+    wx = sx;
+    wy = sy;
+    ww = sw;
+    wh = width;
+  } else if (edge == "Bottom") {
+    wx = sx;
+    wy = sy + sh - width;
+    ww = sw;
+    wh = width;
+  } else {
+    // Default: Right
+    wx = sx + sw - width;
+    wy = sy;
+    ww = width;
+    wh = sh;
+  }
+
+  border(0);
+  resize(wx, wy, ww, wh);
+}
 
 void DesktopWindow::show()
 {
+  if (win2vncMode)
+    applyWin2VNCMode();
+
   Fl_Window::show();
 
 #if !defined(WIN32) && !defined(__APPLE__)
@@ -1578,6 +1636,9 @@ void DesktopWindow::handleClose(Fl_Widget* /*wnd*/, void* /*data*/)
 void DesktopWindow::handleOptions(void *data)
 {
   DesktopWindow *self = (DesktopWindow*)data;
+
+  if (win2vncMode)
+    self->applyWin2VNCMode();
 
   // Call fullscreen_on even if active since it handles
   // fullScreenMode
