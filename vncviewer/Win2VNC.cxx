@@ -448,10 +448,14 @@ void Win2VNCOverlay::warpTo(int x, int y)
   x = std::max(screenX, std::min(screenX + screenW - 1, x));
   y = std::max(screenY, std::min(screenY + screenH - 1, y));
 
-  lastX = x;
-  lastY = y;
-
   win2vncWarpPointer(x, y);
+
+  // Take the system's word for where the pointer ended up, rather than
+  // assuming it went exactly where it was asked to go. Any difference
+  // would be taken for movement by the user otherwise, in the same
+  // direction every single time, and it adds up until the remote
+  // pointer can no longer reach that side of its own screen.
+  Fl::get_mouse(lastX, lastY);
 }
 
 void Win2VNCOverlay::recenterPointer()
