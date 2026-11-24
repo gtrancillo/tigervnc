@@ -135,6 +135,7 @@ void Win2VNCOverlay::takeControl(int entryX, int entryY)
 {
   int screen;
   int entryLocalX, entryLocalY;
+  int coverX, coverY, coverW, coverH;
   struct timeval now;
 
   if (controlling)
@@ -195,9 +196,34 @@ void Win2VNCOverlay::takeControl(int entryX, int entryY)
   gettimeofday(&now, nullptr);
   startTime = now.tv_sec + now.tv_usec / 1000000.0;
 
-  // The window has to cover the entire screen, or we will stop getting
-  // pointer events as soon as the pointer moves off of it
-  resize(screenX, screenY, screenW, screenH);
+  // The window has to cover every screen, not just the one the pointer
+  // came in on. We stop getting pointer events the moment it moves off
+  // of the window, and it only takes one quick movement to cross on to
+  // a neighbouring screen: everything the user did out there would be
+  // movement the remote session never hears about, and a cursor we are
+  // no longer hiding.
+  coverX = screenX;
+  coverY = screenY;
+  coverW = screenX + screenW;
+  coverH = screenY + screenH;
+  for (int idx = 0; idx < Fl::screen_count(); idx++) {
+    int sx, sy, sw, sh;
+
+    Fl::screen_xywh(sx, sy, sw, sh, idx);
+
+    if (sx < coverX)
+      coverX = sx;
+    if (sy < coverY)
+      coverY = sy;
+    if ((sx + sw) > coverW)
+      coverW = sx + sw;
+    if ((sy + sh) > coverH)
+      coverH = sy + sh;
+  }
+  coverW -= coverX;
+  coverH -= coverY;
+
+  resize(coverX, coverY, coverW, coverH);
   show();
 
 #if defined(WIN32)
@@ -219,7 +245,8 @@ void Win2VNCOverlay::takeControl(int entryX, int entryY)
   sendPointer(0);
 
   vlog.debug("Forwarding local input to the remote session "
-             "(entered at %d,%d)", remoteX, remoteY);
+             "(entered at %d,%d, covering %dx%d+%d+%d)",
+             remoteX, remoteY, coverW, coverH, coverX, coverY);
 }
 
 void Win2VNCOverlay::releaseControl()
