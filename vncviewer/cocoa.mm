@@ -320,6 +320,42 @@ void cocoa_keep_window_on_top(Fl_Window *win)
                               NSWindowCollectionBehaviorStationary)];
 }
 
+static void cocoa_activate_app()
+{
+  // -activateIgnoringOtherApps: was deprecated in macOS 14 in favour of
+  // -activate, so prefer the latter where it exists. The old one still
+  // has to be there for everything older, and it is deprecated rather
+  // than gone, so silence the warning about using it.
+#if defined(MAC_OS_VERSION_14_0) && \
+    MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_VERSION_14_0
+  if (@available(macOS 14.0, *)) {
+    [NSApp activate];
+    return;
+  }
+#endif
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+  [NSApp activateIgnoringOtherApps:YES];
+#pragma clang diagnostic pop
+}
+
+void cocoa_activate_window(Fl_Window *win)
+{
+  NSWindow *nsw;
+
+  // Started from a terminal we are not the active application, so a
+  // dialogue would come up behind whatever the user is looking at, and
+  // everything they typed would go to that other application instead.
+  cocoa_activate_app();
+
+  nsw = (NSWindow*)fl_xid(win);
+  if (nsw == nil)
+    return;
+
+  [nsw makeKeyAndOrderFront:nil];
+}
+
 void cocoa_hide_cursor()
 {
   CGDisplayHideCursor(kCGDirectMainDisplay);
