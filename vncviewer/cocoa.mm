@@ -23,7 +23,6 @@
 #include <assert.h>
 #include <dlfcn.h>
 
-#include <FL/Fl.H>
 #include <FL/Fl_Window.H>
 #include <FL/x.H>
 
@@ -319,53 +318,6 @@ void cocoa_keep_window_on_top(Fl_Window *win)
   [nsw setCollectionBehavior:(NSWindowCollectionBehaviorCanJoinAllSpaces |
                               NSWindowCollectionBehaviorFullScreenAuxiliary |
                               NSWindowCollectionBehaviorStationary)];
-}
-
-static void cocoa_activate_app()
-{
-  ProcessSerialNumber psn = { 0, kCurrentProcess };
-
-  // A bare executable started from a terminal is not a foreground
-  // application as far as the window server is concerned, and such a
-  // process cannot be given the keyboard. Promote ourselves first.
-  TransformProcessType(&psn, kProcessTransformToForegroundApplication);
-
-  // -activate, which replaced this in macOS 14, is cooperative: the
-  // system is free to refuse it, and does refuse it for a process that
-  // is not already in front. That is precisely the case we need to get
-  // out of, so stay with the forceful one for as long as it exists.
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-  [NSApp activateIgnoringOtherApps:YES];
-#pragma clang diagnostic pop
-}
-
-static void cocoa_activate_later(void* /*data*/)
-{
-  cocoa_activate_app();
-}
-
-void cocoa_activate_window(Fl_Window *win)
-{
-  NSWindow *nsw;
-
-  // Started from a terminal we are not the active application, so a
-  // dialogue would come up behind whatever the user is looking at, and
-  // everything they typed would go to that other application instead.
-  cocoa_activate_app();
-
-  nsw = (NSWindow*)fl_xid(win);
-  if (nsw != nil)
-    [nsw makeKeyAndOrderFront:nil];
-
-  // Becoming a foreground application only takes effect once the run
-  // loop has had a turn, so the request above arrives too early to be
-  // granted: the window is ordered to the front but the keyboard stays
-  // with whoever started us. Ask again once things have settled. These
-  // take no arguments, so they are harmless if the window is already
-  // gone by then.
-  Fl::add_timeout(0.1, cocoa_activate_later);
-  Fl::add_timeout(0.5, cocoa_activate_later);
 }
 
 void cocoa_hide_cursor()

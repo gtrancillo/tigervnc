@@ -77,10 +77,6 @@ std::string CConn::savedPassword;
 #include "win32.h"
 #endif
 
-#ifdef __APPLE__
-#include "cocoa.h"
-#endif
-
 static core::LogWriter vlog("CConn");
 
 // 8 colours (1 bit per component)
@@ -406,12 +402,6 @@ void CConn::getUserPasswd(bool secure, std::string *user,
 
   AuthDialog d(secure, user != nullptr, password != nullptr);
   d.show();
-#ifdef __APPLE__
-  // The window manager normally takes care of this, but macOS leaves
-  // the keyboard with whatever application was already in front. The
-  // user would be typing their password in to that one.
-  cocoa_activate_window(&d);
-#endif
   while (d.shown())
     Fl::wait();
   ret_val = d.result();
