@@ -32,6 +32,8 @@ extern "C" {
 int win32_enable_lowlevel_keyboard(HWND hwnd);
 void win32_disable_lowlevel_keyboard(HWND hwnd);
 
+void win32_make_window_transparent(HWND hwnd);
+
 #ifdef __cplusplus
 };
 #endif

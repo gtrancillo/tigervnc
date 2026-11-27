@@ -82,11 +82,19 @@ public:
 
   void fullscreen_on();
 
-  // Grab keyboard events from desktop environment
+  // Grab keyboard & mouse events
   void grabKeyboard();
   void ungrabKeyboard();
+  void grabPointer();
+  void ungrabPointer();
+
+  // Turn this window in to a trigger strip along the screen edge (or
+  // back in to a normal window) depending on the Win2VNCMode parameter
+  void applyWin2VNCMode();
 
 private:
+  void win2vncSetupStrip();
+
   void addOverlayTip(const char *text, ...)
     __attribute__((__format__ (__printf__, 2, 3)));
   void addOverlayError(const char *text, ...)
@@ -99,9 +107,6 @@ private:
 
   bool hasFocus();
   static void checkFocus(void *data);
-
-  void grabPointer();
-  void ungrabPointer();
 
   void maximizeWindow();
 
@@ -149,6 +154,7 @@ private:
 
   bool keyboardGrabbed;
   bool mouseGrabbed;
+  bool win2vncStrip;
 
   bool regrabOnFocus;
 

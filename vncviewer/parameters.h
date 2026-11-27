@@ -59,6 +59,10 @@ extern core::StringParameter desktopSize;
 extern core::StringParameter geometry;
 extern core::BoolParameter remoteResize;
 
+extern core::BoolParameter win2vncMode;
+extern core::EnumParameter win2vncEdge;
+extern core::IntParameter win2vncWidth;
+
 extern core::BoolParameter listenMode;
 
 extern core::BoolParameter viewOnly;

@@ -211,6 +211,24 @@ void x11_warp_pointer(unsigned x, unsigned y)
   XWarpPointer(fl_display, rootwindow, rootwindow, 0, 0, 0, 0, x, y);
 }
 
+void x11_set_window_opacity(Fl_Window* win, double opacity)
+{
+  unsigned long value;
+
+  if (opacity < 0.0)
+    opacity = 0.0;
+  if (opacity > 1.0)
+    opacity = 1.0;
+
+  value = (unsigned long)(opacity * 0xffffffffUL);
+
+  XChangeProperty(fl_display, fl_xid(win),
+                  XInternAtom(fl_display, "_NET_WM_WINDOW_OPACITY", False),
+                  XA_CARDINAL, 32, PropModeReplace,
+                  (unsigned char*)&value, 1);
+  XFlush(fl_display);
+}
+
 bool x11_is_pointer_on_same_screen(Fl_Window* win)
 {
   Window root, child;

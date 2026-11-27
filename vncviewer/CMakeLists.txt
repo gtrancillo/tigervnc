@@ -21,6 +21,7 @@ add_executable(vncviewer
   OptionsDialog.cxx
   PlatformPixelBuffer.cxx
   Viewport.cxx
+  Win2VNC.cxx
   parameters.cxx
   touch.cxx
   MonitorIndicesParameter.cxx
