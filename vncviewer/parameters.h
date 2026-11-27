@@ -71,6 +71,7 @@ extern core::BoolParameter playAudio;
 extern core::BoolParameter acceptClipboard;
 extern core::BoolParameter setPrimary;
 extern core::BoolParameter sendClipboard;
+extern core::BoolParameter extendedClipboard;
 #if !defined(WIN32) && !defined(__APPLE__)
 extern core::BoolParameter sendPrimary;
 extern core::StringParameter display;
