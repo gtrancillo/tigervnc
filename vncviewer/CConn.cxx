@@ -110,6 +110,8 @@ CConn::CConn()
   supportsDesktopResize = true;
   supportsLEDState = true;
 
+  supportsExtendedClipboard = extendedClipboard;
+
 #ifdef HAVE_AUDIO
   // Only ask the server to send audio if there is a device that can
   // play it. Opening that device is deferred until the server actually

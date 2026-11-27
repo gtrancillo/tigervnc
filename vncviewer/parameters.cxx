@@ -233,6 +233,13 @@ core::BoolParameter
   sendClipboard("SendClipboard",
                 _("Send clipboard changes to the server"),
                 true);
+core::BoolParameter
+  extendedClipboard("ExtendedClipboard",
+                    _("Use the extended clipboard protocol when the "
+                      "server offers it. Turn this off for servers that "
+                      "mishandle it, at the cost of losing non-Latin-1 "
+                      "characters"),
+                    true);
 #if !defined(WIN32) && !defined(__APPLE__)
 core::BoolParameter
   setPrimary("SetPrimary",
@@ -318,6 +325,7 @@ static core::VoidParameter* parameterArray[] = {
   &cursorType,
   &acceptClipboard,
   &sendClipboard,
+  &extendedClipboard,
 #if !defined(WIN32) && !defined(__APPLE__)
   &sendPrimary,
   &setPrimary,
