@@ -23,6 +23,7 @@
 #include <assert.h>
 #include <dlfcn.h>
 
+#include <FL/Fl.H>
 #include <FL/Fl_Window.H>
 #include <FL/x.H>
 
@@ -339,6 +340,11 @@ static void cocoa_activate_app()
 #pragma clang diagnostic pop
 }
 
+static void cocoa_activate_later(void* /*data*/)
+{
+  cocoa_activate_app();
+}
+
 void cocoa_activate_window(Fl_Window *win)
 {
   NSWindow *nsw;
@@ -349,10 +355,17 @@ void cocoa_activate_window(Fl_Window *win)
   cocoa_activate_app();
 
   nsw = (NSWindow*)fl_xid(win);
-  if (nsw == nil)
-    return;
+  if (nsw != nil)
+    [nsw makeKeyAndOrderFront:nil];
 
-  [nsw makeKeyAndOrderFront:nil];
+  // Becoming a foreground application only takes effect once the run
+  // loop has had a turn, so the request above arrives too early to be
+  // granted: the window is ordered to the front but the keyboard stays
+  // with whoever started us. Ask again once things have settled. These
+  // take no arguments, so they are harmless if the window is already
+  // gone by then.
+  Fl::add_timeout(0.1, cocoa_activate_later);
+  Fl::add_timeout(0.5, cocoa_activate_later);
 }
 
 void cocoa_hide_cursor()
