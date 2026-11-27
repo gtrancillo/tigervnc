@@ -142,6 +142,13 @@ AuthDialog::AuthDialog(bool secure_, bool needsUser, bool needsPassword)
   size(w(), y);
 
   set_modal();
+
+  // Start out in the first field the user has to fill in, rather than
+  // wherever FLTK happens to put the keyboard
+  if (username != nullptr)
+    username->take_focus();
+  else if (passwd != nullptr)
+    passwd->take_focus();
 }
 
 AuthDialog::~AuthDialog()
