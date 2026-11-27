@@ -20,6 +20,8 @@
 #ifndef __VIEWPORT_H__
 #define __VIEWPORT_H__
 
+#include <sys/time.h>
+
 #include <core/Rect.h>
 
 #include <FL/Fl_Widget.H>
@@ -35,6 +37,7 @@ class CConn;
 class Keyboard;
 class PlatformPixelBuffer;
 class Surface;
+class Win2VNCOverlay;
 
 class Viewport : public Fl_Widget, protected EmulateMB,
                  protected KeyboardHandler {
@@ -69,6 +72,21 @@ public:
   void resize(int x, int y, int w, int h) override;
 
   int handle(int event) override;
+
+  // Win2VNC mode, where the local input devices are handed over to the
+  // remote session when the pointer touches the trigger strip
+
+  // Is the remote session currently in control of the local devices?
+  bool win2vncActive() const;
+  // Hand the local devices over to the remote session
+  void win2vncStart();
+  // Give the local devices back to the local system
+  void win2vncStop();
+
+  // Called by Win2VNCOverlay
+  void win2vncGetRemoteSize(int* width, int* height);
+  void win2vncSendPointer(const core::Point& pos, uint16_t buttonMask);
+  void win2vncReleased();
 
 protected:
   void sendPointerEvent(const core::Point& pos,
@@ -133,6 +151,9 @@ private:
   Fl_RGB_Image *cursor;
   core::Point cursorHotspot;
   bool cursorIsBlank;
+
+  Win2VNCOverlay* win2vncOverlay;
+  struct timeval win2vncLastRelease;
 };
 
 #endif

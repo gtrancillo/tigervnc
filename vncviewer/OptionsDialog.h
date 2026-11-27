@@ -58,6 +58,7 @@ protected:
   void createInputPage(int tx, int ty, int tw, int th);
   void createShortcutsPage(int tx, int ty, int tw, int th);
   void createDisplayPage(int tx, int ty, int tw, int th);
+  void createWin2VNCPage(int tx, int ty, int tw, int th);
   void createMiscPage(int tx, int ty, int tw, int th);
 
   static void handleAutoselect(Fl_Widget *widget, void *data);
@@ -74,6 +75,7 @@ protected:
   static void handleModifier(Fl_Widget *widget, void *data);
 
   static void handleFullScreenMode(Fl_Widget *widget, void *data);
+  static void handleWin2VNC(Fl_Widget *widget, void *data);
 
   static void handleCancel(Fl_Widget *widget, void *data);
   static void handleOK(Fl_Widget *widget, void *data);
@@ -169,6 +171,12 @@ protected:
 #ifdef HAVE_AUDIO
   Fl_Check_Button *audioCheckbox;
 #endif
+
+  /* Win2VNC */
+  Fl_Check_Button *win2vncCheckbox;
+  Fl_Group *win2vncGroup;
+  Fl_Choice *win2vncEdgeChoice;
+  Fl_Int_Input *win2vncWidthInput;
 
 private:
   static int fltk_event_handler(int event);

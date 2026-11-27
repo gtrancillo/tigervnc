@@ -39,4 +39,19 @@ void cocoa_win_zoom(Fl_Window *win);
 
 void cocoa_enable_minimize(Fl_Window *win);
 
+// Make a window completely see-through, and keep it above everything
+// else (including the menu bar)
+void cocoa_make_window_transparent(Fl_Window *win);
+
+// Keep a window above other applications' windows
+void cocoa_keep_window_on_top(Fl_Window *win);
+
+// Hide/show the mouse cursor for our application
+void cocoa_hide_cursor();
+void cocoa_show_cursor();
+
+// Move the mouse cursor, without the events that follow being
+// suppressed for a while
+void cocoa_warp_cursor(int x, int y);
+
 #endif

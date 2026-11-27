@@ -190,6 +190,26 @@ core::BoolParameter
                true);
 
 core::BoolParameter
+  win2vncMode("Win2VNCMode",
+              _("Shrink the window to a strip along the edge of the "
+                "screen, and hand the local mouse and keyboard over to "
+                "the remote session when the pointer touches it"),
+              false);
+core::EnumParameter
+  win2vncEdge("Win2VNCEdge",
+              core::format(
+                "%s (%s)",
+                _("Which edge of the local screen the remote system is "
+                  "located at"),
+                "Right, Left, Top, Bottom").c_str(),
+              {"Right", "Left", "Top", "Bottom"}, "Right");
+core::IntParameter
+  win2vncWidth("Win2VNCWidth",
+               _("Thickness in pixels of the strip along the screen "
+                 "edge that hands input over to the remote session"),
+               3, 1, 50);
+
+core::BoolParameter
   viewOnly("ViewOnly",
            _("Don't send any mouse or keyboard events to the server"),
            false);
@@ -288,6 +308,9 @@ static core::VoidParameter* parameterArray[] = {
   &fullScreen,
   &fullScreenMode,
   &fullScreenSelectedMonitors,
+  &win2vncMode,
+  &win2vncEdge,
+  &win2vncWidth,
   /* Input */
   &viewOnly,
   &emulateMiddleButton,

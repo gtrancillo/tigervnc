@@ -278,3 +278,70 @@ void cocoa_enable_minimize(Fl_Window *win)
   assert(nsw);
   nsw.styleMask |= NSWindowStyleMaskMiniaturizable;
 }
+
+void cocoa_make_window_transparent(Fl_Window *win)
+{
+  NSWindow *nsw;
+
+  nsw = (NSWindow*)fl_xid(win);
+  assert(nsw);
+
+  // The window draws nothing at all, so with a clear background it
+  // becomes completely invisible whilst still catching every mouse
+  // event that happens on top of it
+  [nsw setOpaque:NO];
+  [nsw setBackgroundColor:[NSColor clearColor]];
+  [nsw setHasShadow:NO];
+  [nsw setIgnoresMouseEvents:NO];
+  [nsw setAcceptsMouseMovedEvents:YES];
+
+  // Above everything else, including the menu bar, or the pointer
+  // would end up interacting with whatever is underneath
+  [nsw setLevel:NSStatusWindowLevel];
+  [nsw setCollectionBehavior:(NSWindowCollectionBehaviorCanJoinAllSpaces |
+                              NSWindowCollectionBehaviorFullScreenAuxiliary |
+                              NSWindowCollectionBehaviorStationary)];
+
+  // macOS only delivers mouse motion to the key window, so make sure
+  // that is us
+  [nsw makeKeyAndOrderFront:nil];
+}
+
+void cocoa_keep_window_on_top(Fl_Window *win)
+{
+  NSWindow *nsw;
+
+  nsw = (NSWindow*)fl_xid(win);
+  assert(nsw);
+
+  [nsw setLevel:NSFloatingWindowLevel];
+  [nsw setCollectionBehavior:(NSWindowCollectionBehaviorCanJoinAllSpaces |
+                              NSWindowCollectionBehaviorFullScreenAuxiliary |
+                              NSWindowCollectionBehaviorStationary)];
+}
+
+void cocoa_hide_cursor()
+{
+  CGDisplayHideCursor(kCGDirectMainDisplay);
+}
+
+void cocoa_show_cursor()
+{
+  CGDisplayShowCursor(kCGDirectMainDisplay);
+}
+
+void cocoa_warp_cursor(int x, int y)
+{
+  CGPoint new_pos;
+
+  new_pos.x = x;
+  new_pos.y = y;
+
+  CGWarpMouseCursorPosition(new_pos);
+
+  // macOS normally ignores any mouse movement for a while after the
+  // cursor has been moved programmatically. Re-associating the cursor
+  // with the mouse resets that delay, which is essential as we warp the
+  // cursor whilst the user is moving the mouse.
+  CGAssociateMouseAndMouseCursorPosition(true);
+}
