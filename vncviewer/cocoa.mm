@@ -322,18 +322,17 @@ void cocoa_keep_window_on_top(Fl_Window *win)
 
 static void cocoa_activate_app()
 {
-  // -activateIgnoringOtherApps: was deprecated in macOS 14 in favour of
-  // -activate, so prefer the latter where it exists. The old one still
-  // has to be there for everything older, and it is deprecated rather
-  // than gone, so silence the warning about using it.
-#if defined(MAC_OS_VERSION_14_0) && \
-    MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_VERSION_14_0
-  if (@available(macOS 14.0, *)) {
-    [NSApp activate];
-    return;
-  }
-#endif
+  ProcessSerialNumber psn = { 0, kCurrentProcess };
 
+  // A bare executable started from a terminal is not a foreground
+  // application as far as the window server is concerned, and such a
+  // process cannot be given the keyboard. Promote ourselves first.
+  TransformProcessType(&psn, kProcessTransformToForegroundApplication);
+
+  // -activate, which replaced this in macOS 14, is cooperative: the
+  // system is free to refuse it, and does refuse it for a process that
+  // is not already in front. That is precisely the case we need to get
+  // out of, so stay with the forceful one for as long as it exists.
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
   [NSApp activateIgnoringOtherApps:YES];
