@@ -317,6 +317,11 @@ namespace rfb {
     bool supportsLEDState;
     bool supportsAudio;
 
+    // Unlike the above, this one starts out enabled. A subclass can
+    // turn it off for servers that cannot handle the extended
+    // clipboard correctly.
+    bool supportsExtendedClipboard;
+
   private:
     bool processVersionMsg();
     bool processSecurityTypesMsg();

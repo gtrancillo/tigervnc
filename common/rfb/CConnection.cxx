@@ -73,7 +73,7 @@ CConnection::CConnection()
   : csecurity(nullptr),
     supportsLocalCursor(false), supportsCursorPosition(false),
     supportsDesktopResize(false), supportsLEDState(false),
-    supportsAudio(false),
+    supportsAudio(false), supportsExtendedClipboard(true),
     is(nullptr), os(nullptr), reader_(nullptr), writer_(nullptr),
     shared(false),
     state_(RFBSTATE_UNINITIALISED),
@@ -1103,7 +1103,8 @@ void CConnection::updateEncodings()
 
   encodings.push_back(pseudoEncodingDesktopName);
   encodings.push_back(pseudoEncodingLastRect);
-  encodings.push_back(pseudoEncodingExtendedClipboard);
+  if (supportsExtendedClipboard)
+    encodings.push_back(pseudoEncodingExtendedClipboard);
   encodings.push_back(pseudoEncodingContinuousUpdates);
   encodings.push_back(pseudoEncodingFence);
   encodings.push_back(pseudoEncodingQEMUKeyEvent);
